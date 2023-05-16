@@ -1,0 +1,259 @@
+2023-04-17 11:51:25 [main] INFO  com.web.test.TestApplication - Starting TestApplication using Java 1.8.0_362 on zhengyanchendeMacBook-Pro.local with PID 3159 (/Users/zhengyanchen/Desktop/spring/test/target/classes started by zhengyanchen in /Users/zhengyanchen/Desktop/spring/test)
+2023-04-17 11:51:25 [main] INFO  com.web.test.TestApplication - No active profile set, falling back to 1 default profile: "default"
+2023-04-17 11:51:26 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 28080 (http)
+2023-04-17 11:51:26 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-04-17 11:51:26 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-04-17 11:51:26 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-04-17 11:51:26 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 853 ms
+2023-04-17 11:51:27 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 28080 (http) with context path ''
+2023-04-17 11:51:27 [main] INFO  com.web.test.TestApplication - Started TestApplication in 1.975 seconds (JVM running for 3.019)
+2023-04-17 11:51:40 [http-nio-28080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-17 11:51:40 [http-nio-28080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-04-17 11:51:40 [http-nio-28080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-04-17 11:51:40 [http-nio-28080-exec-2] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 13:10:41 [main] INFO  com.web.test.TestApplication - Starting TestApplication using Java 1.8.0_362 on zhengyanchendeMacBook-Pro.local with PID 40489 (/Users/zhengyanchen/Desktop/spring/test/target/classes started by zhengyanchen in /Users/zhengyanchen/Desktop/spring/test)
+2023-04-17 13:10:41 [main] INFO  com.web.test.TestApplication - No active profile set, falling back to 1 default profile: "default"
+2023-04-17 13:10:42 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 28080 (http)
+2023-04-17 13:10:42 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-04-17 13:10:42 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-04-17 13:10:42 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-04-17 13:10:42 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1176 ms
+2023-04-17 13:10:43 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 28080 (http) with context path ''
+2023-04-17 13:10:43 [main] INFO  com.web.test.TestApplication - Started TestApplication in 2.634 seconds (JVM running for 3.369)
+2023-04-17 13:11:14 [http-nio-28080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-17 13:11:14 [http-nio-28080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-04-17 13:11:14 [http-nio-28080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-04-17 13:11:14 [http-nio-28080-exec-1] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2023-04-17 13:11:19 [http-nio-28080-exec-2] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2023-04-17 13:12:23 [main] INFO  com.web.test.TestApplication - Starting TestApplication using Java 1.8.0_362 on zhengyanchendeMacBook-Pro.local with PID 41291 (/Users/zhengyanchen/Desktop/spring/test/target/classes started by zhengyanchen in /Users/zhengyanchen/Desktop/spring/test)
+2023-04-17 13:12:23 [main] INFO  com.web.test.TestApplication - No active profile set, falling back to 1 default profile: "default"
+2023-04-17 13:12:24 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 28080 (http)
+2023-04-17 13:12:24 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-04-17 13:12:24 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-04-17 13:12:24 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-04-17 13:12:24 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 999 ms
+2023-04-17 13:12:25 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 28080 (http) with context path ''
+2023-04-17 13:12:25 [main] INFO  com.web.test.TestApplication - Started TestApplication in 2.292 seconds (JVM running for 2.906)
+2023-04-17 13:17:47 [main] INFO  com.web.test.TestApplication - Starting TestApplication using Java 1.8.0_362 on zhengyanchendeMacBook-Pro.local with PID 43860 (/Users/zhengyanchen/Desktop/spring/test/target/classes started by zhengyanchen in /Users/zhengyanchen/Desktop/spring/test)
+2023-04-17 13:17:47 [main] INFO  com.web.test.TestApplication - No active profile set, falling back to 1 default profile: "default"
+2023-04-17 13:17:48 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 28080 (http)
+2023-04-17 13:17:48 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-04-17 13:17:48 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-04-17 13:17:48 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-04-17 13:17:48 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1011 ms
+2023-04-17 13:17:48 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 28080 (http) with context path ''
+2023-04-17 13:17:48 [main] INFO  com.web.test.TestApplication - Started TestApplication in 2.359 seconds (JVM running for 3.025)
+2023-04-17 13:17:57 [http-nio-28080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-17 13:17:57 [http-nio-28080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-04-17 13:17:57 [http-nio-28080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-04-17 13:17:57 [http-nio-28080-exec-1] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 13:17:57 [http-nio-28080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-04-17 13:17:58 [http-nio-28080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-04-17 13:24:55 [http-nio-28080-exec-4] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 13:26:29 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-04-17 13:26:29 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-04-17 13:26:35 [main] INFO  com.web.test.TestApplication - Starting TestApplication using Java 1.8.0_362 on zhengyanchendeMacBook-Pro.local with PID 48093 (/Users/zhengyanchen/Desktop/spring/test/target/classes started by zhengyanchen in /Users/zhengyanchen/Desktop/spring/test)
+2023-04-17 13:26:35 [main] INFO  com.web.test.TestApplication - No active profile set, falling back to 1 default profile: "default"
+2023-04-17 13:26:36 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 28080 (http)
+2023-04-17 13:26:36 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-04-17 13:26:36 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-04-17 13:26:36 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-04-17 13:26:36 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 973 ms
+2023-04-17 13:26:36 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 28080 (http) with context path ''
+2023-04-17 13:26:36 [main] INFO  com.web.test.TestApplication - Started TestApplication in 2.272 seconds (JVM running for 3.008)
+2023-04-17 13:26:52 [http-nio-28080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-17 13:26:52 [http-nio-28080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-04-17 13:26:52 [http-nio-28080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2023-04-17 13:26:52 [http-nio-28080-exec-1] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 13:26:52 [http-nio-28080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-04-17 13:26:52 [http-nio-28080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-04-17 13:26:53 [http-nio-28080-exec-2] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 13:26:54 [http-nio-28080-exec-3] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 13:26:54 [http-nio-28080-exec-4] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 13:27:03 [http-nio-28080-exec-5] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 13:30:06 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-04-17 13:30:06 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-04-17 13:30:11 [main] INFO  com.web.test.TestApplication - Starting TestApplication using Java 1.8.0_362 on zhengyanchendeMacBook-Pro.local with PID 49851 (/Users/zhengyanchen/Desktop/spring/test/target/classes started by zhengyanchen in /Users/zhengyanchen/Desktop/spring/test)
+2023-04-17 13:30:11 [main] INFO  com.web.test.TestApplication - No active profile set, falling back to 1 default profile: "default"
+2023-04-17 13:30:12 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 28080 (http)
+2023-04-17 13:30:12 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-04-17 13:30:12 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-04-17 13:30:12 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-04-17 13:30:12 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 978 ms
+2023-04-17 13:30:13 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 28080 (http) with context path ''
+2023-04-17 13:30:13 [main] INFO  com.web.test.TestApplication - Started TestApplication in 2.252 seconds (JVM running for 3.048)
+2023-04-17 13:30:19 [http-nio-28080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-17 13:30:19 [http-nio-28080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-04-17 13:30:19 [http-nio-28080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2023-04-17 13:30:19 [http-nio-28080-exec-1] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 13:30:19 [http-nio-28080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-04-17 13:30:20 [http-nio-28080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-04-17 13:30:23 [http-nio-28080-exec-2] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 13:30:23 [http-nio-28080-exec-3] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 13:30:23 [http-nio-28080-exec-4] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 13:30:23 [http-nio-28080-exec-5] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 13:30:24 [http-nio-28080-exec-6] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 13:30:24 [http-nio-28080-exec-7] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 13:30:24 [http-nio-28080-exec-8] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 13:30:24 [http-nio-28080-exec-9] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 13:30:24 [http-nio-28080-exec-10] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 13:30:26 [http-nio-28080-exec-1] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 13:30:28 [http-nio-28080-exec-2] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 13:30:28 [http-nio-28080-exec-3] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 13:30:28 [http-nio-28080-exec-4] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 13:30:33 [http-nio-28080-exec-5] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 13:36:56 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-04-17 13:36:56 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-04-17 13:37:01 [main] INFO  com.web.test.TestApplication - Starting TestApplication using Java 1.8.0_362 on zhengyanchendeMacBook-Pro.local with PID 53031 (/Users/zhengyanchen/Desktop/spring/test/target/classes started by zhengyanchen in /Users/zhengyanchen/Desktop/spring/test)
+2023-04-17 13:37:01 [main] INFO  com.web.test.TestApplication - No active profile set, falling back to 1 default profile: "default"
+2023-04-17 13:37:02 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 28080 (http)
+2023-04-17 13:37:02 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-04-17 13:37:02 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-04-17 13:37:02 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-04-17 13:37:02 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 967 ms
+2023-04-17 13:37:03 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 28080 (http) with context path ''
+2023-04-17 13:37:03 [main] INFO  com.web.test.TestApplication - Started TestApplication in 2.228 seconds (JVM running for 2.853)
+2023-04-17 13:37:09 [http-nio-28080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-17 13:37:09 [http-nio-28080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-04-17 13:37:09 [http-nio-28080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-04-17 13:37:09 [http-nio-28080-exec-1] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 13:37:09 [http-nio-28080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-04-17 13:37:09 [http-nio-28080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-04-17 15:45:18 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-04-17 15:45:18 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-04-17 15:45:27 [main] INFO  com.web.test.TestApplication - Starting TestApplication using Java 1.8.0_362 on zhengyanchendeMacBook-Pro.local with PID 14373 (/Users/zhengyanchen/Desktop/spring/test/target/classes started by zhengyanchen in /Users/zhengyanchen/Desktop/spring/test)
+2023-04-17 15:45:27 [main] INFO  com.web.test.TestApplication - No active profile set, falling back to 1 default profile: "default"
+2023-04-17 15:45:28 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 28080 (http)
+2023-04-17 15:45:28 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-04-17 15:45:28 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-04-17 15:45:28 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-04-17 15:45:28 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1070 ms
+2023-04-17 15:45:28 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 28080 (http) with context path ''
+2023-04-17 15:45:28 [main] INFO  com.web.test.TestApplication - Started TestApplication in 3.151 seconds (JVM running for 3.914)
+2023-04-17 15:46:25 [http-nio-28080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-17 15:46:25 [http-nio-28080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-04-17 15:46:25 [http-nio-28080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2023-04-17 15:46:26 [http-nio-28080-exec-1] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 15:46:26 [http-nio-28080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-04-17 15:46:26 [http-nio-28080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-04-17 15:55:51 [http-nio-28080-exec-5] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 16:26:11 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m44s607ms).
+2023-04-17 20:43:50 [http-nio-28080-exec-2] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 20:43:51 [http-nio-28080-exec-3] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 21:46:25 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-04-17 21:46:25 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-04-17 21:46:31 [main] INFO  com.web.test.TestApplication - Starting TestApplication using Java 1.8.0_362 on zhengyanchendeMacBook-Pro.local with PID 78067 (/Users/zhengyanchen/Desktop/spring/test/target/classes started by zhengyanchen in /Users/zhengyanchen/Desktop/spring/test)
+2023-04-17 21:46:31 [main] INFO  com.web.test.TestApplication - No active profile set, falling back to 1 default profile: "default"
+2023-04-17 21:46:32 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 28080 (http)
+2023-04-17 21:46:32 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-04-17 21:46:32 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-04-17 21:46:32 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-04-17 21:46:32 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 987 ms
+2023-04-17 21:46:33 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 28080 (http) with context path ''
+2023-04-17 21:46:33 [main] INFO  com.web.test.TestApplication - Started TestApplication in 2.268 seconds (JVM running for 2.903)
+2023-04-17 21:50:35 [http-nio-28080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-17 21:50:35 [http-nio-28080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-04-17 21:50:35 [http-nio-28080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-04-17 21:50:35 [http-nio-28080-exec-1] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'application/x-www-form-urlencoded;charset=UTF-8' not supported]
+2023-04-17 21:50:37 [http-nio-28080-exec-2] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'application/x-www-form-urlencoded;charset=UTF-8' not supported]
+2023-04-17 21:50:38 [http-nio-28080-exec-3] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'application/x-www-form-urlencoded;charset=UTF-8' not supported]
+2023-04-17 21:50:55 [http-nio-28080-exec-4] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'application/x-www-form-urlencoded;charset=UTF-8' not supported]
+2023-04-17 21:50:57 [http-nio-28080-exec-5] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'application/x-www-form-urlencoded;charset=UTF-8' not supported]
+2023-04-17 21:50:57 [http-nio-28080-exec-6] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'application/x-www-form-urlencoded;charset=UTF-8' not supported]
+2023-04-17 21:50:57 [http-nio-28080-exec-7] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'application/x-www-form-urlencoded;charset=UTF-8' not supported]
+2023-04-17 21:50:57 [http-nio-28080-exec-8] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'application/x-www-form-urlencoded;charset=UTF-8' not supported]
+2023-04-17 21:50:59 [http-nio-28080-exec-9] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'application/x-www-form-urlencoded;charset=UTF-8' not supported]
+2023-04-17 21:51:11 [main] INFO  com.web.test.TestApplication - Starting TestApplication using Java 1.8.0_362 on zhengyanchendeMacBook-Pro.local with PID 80327 (/Users/zhengyanchen/Desktop/spring/test/target/classes started by zhengyanchen in /Users/zhengyanchen/Desktop/spring/test)
+2023-04-17 21:51:11 [main] INFO  com.web.test.TestApplication - No active profile set, falling back to 1 default profile: "default"
+2023-04-17 21:51:12 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 28080 (http)
+2023-04-17 21:51:12 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-04-17 21:51:12 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-04-17 21:51:12 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-04-17 21:51:12 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1064 ms
+2023-04-17 21:51:13 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 28080 (http) with context path ''
+2023-04-17 21:51:13 [main] INFO  com.web.test.TestApplication - Started TestApplication in 2.402 seconds (JVM running for 3.028)
+2023-04-17 21:51:46 [http-nio-28080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-17 21:51:46 [http-nio-28080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-04-17 21:51:46 [http-nio-28080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-04-17 21:51:46 [http-nio-28080-exec-1] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'application/x-www-form-urlencoded;charset=UTF-8' not supported]
+2023-04-17 21:51:47 [http-nio-28080-exec-2] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'application/x-www-form-urlencoded;charset=UTF-8' not supported]
+2023-04-17 21:51:47 [http-nio-28080-exec-3] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'application/x-www-form-urlencoded;charset=UTF-8' not supported]
+2023-04-17 21:51:49 [http-nio-28080-exec-4] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'application/x-www-form-urlencoded;charset=UTF-8' not supported]
+2023-04-17 21:51:53 [http-nio-28080-exec-5] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'application/x-www-form-urlencoded;charset=UTF-8' not supported]
+2023-04-17 21:53:22 [http-nio-28080-exec-7] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2023-04-17 21:53:23 [http-nio-28080-exec-8] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2023-04-17 21:53:23 [http-nio-28080-exec-9] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2023-04-17 21:53:24 [http-nio-28080-exec-10] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2023-04-17 21:53:31 [http-nio-28080-exec-1] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 21:53:31 [http-nio-28080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-04-17 21:53:31 [http-nio-28080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-04-17 21:53:32 [http-nio-28080-exec-2] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 21:53:33 [http-nio-28080-exec-3] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 21:53:34 [http-nio-28080-exec-4] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 21:53:35 [http-nio-28080-exec-5] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 21:53:36 [http-nio-28080-exec-6] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 21:53:37 [http-nio-28080-exec-7] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 21:53:37 [http-nio-28080-exec-8] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 21:53:37 [http-nio-28080-exec-9] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 21:53:38 [http-nio-28080-exec-10] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 21:53:38 [http-nio-28080-exec-1] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 21:53:38 [http-nio-28080-exec-2] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 21:53:38 [http-nio-28080-exec-3] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 21:53:38 [http-nio-28080-exec-4] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 21:53:45 [http-nio-28080-exec-5] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 21:53:46 [http-nio-28080-exec-6] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 21:54:09 [http-nio-28080-exec-7] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 21:54:11 [http-nio-28080-exec-8] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 21:54:13 [http-nio-28080-exec-9] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 21:54:13 [http-nio-28080-exec-10] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 21:54:14 [http-nio-28080-exec-1] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 21:54:16 [http-nio-28080-exec-2] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 21:54:23 [http-nio-28080-exec-3] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 22:09:38 [http-nio-28080-exec-10] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 22:09:38 [http-nio-28080-exec-1] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 22:52:50 [http-nio-28080-exec-3] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 22:52:51 [http-nio-28080-exec-4] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 22:52:51 [http-nio-28080-exec-5] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 22:52:51 [http-nio-28080-exec-6] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 22:52:51 [http-nio-28080-exec-7] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 22:52:52 [http-nio-28080-exec-8] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 22:52:52 [http-nio-28080-exec-9] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 22:52:52 [http-nio-28080-exec-10] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 22:52:52 [http-nio-28080-exec-1] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 22:52:52 [http-nio-28080-exec-2] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 22:52:53 [http-nio-28080-exec-3] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 22:52:53 [http-nio-28080-exec-4] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 22:53:20 [http-nio-28080-exec-5] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 22:53:21 [http-nio-28080-exec-6] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 22:53:21 [http-nio-28080-exec-7] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 22:53:43 [http-nio-28080-exec-8] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 22:53:43 [http-nio-28080-exec-9] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 22:53:43 [http-nio-28080-exec-10] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 22:53:43 [http-nio-28080-exec-1] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 22:53:43 [http-nio-28080-exec-2] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 22:53:44 [http-nio-28080-exec-3] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 22:53:44 [http-nio-28080-exec-4] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 22:53:45 [http-nio-28080-exec-5] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 22:53:45 [http-nio-28080-exec-6] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 22:53:45 [http-nio-28080-exec-7] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 22:53:45 [http-nio-28080-exec-8] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 22:53:45 [http-nio-28080-exec-9] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 22:54:16 [http-nio-28080-exec-10] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 22:54:16 [http-nio-28080-exec-1] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 22:54:17 [http-nio-28080-exec-2] INFO  com.web.test.DemoController - This is an info log message
+2023-04-17 23:12:19 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-04-17 23:12:19 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-04-17 23:12:24 [main] INFO  com.web.test.TestApplication - Starting TestApplication using Java 1.8.0_362 on zhengyanchendeMacBook-Pro.local with PID 19672 (/Users/zhengyanchen/Desktop/spring/test/target/classes started by zhengyanchen in /Users/zhengyanchen/Desktop/spring/test)
+2023-04-17 23:12:24 [main] INFO  com.web.test.TestApplication - No active profile set, falling back to 1 default profile: "default"
+2023-04-17 23:12:25 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 28080 (http)
+2023-04-17 23:12:25 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-04-17 23:12:25 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-04-17 23:12:25 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-04-17 23:12:25 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1114 ms
+2023-04-17 23:12:26 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 28080 (http) with context path ''
+2023-04-17 23:12:26 [main] INFO  com.web.test.TestApplication - Started TestApplication in 2.531 seconds (JVM running for 3.184)
+2023-04-17 23:12:56 [http-nio-28080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-17 23:12:56 [http-nio-28080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-04-17 23:12:56 [http-nio-28080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-04-17 23:12:56 [http-nio-28080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-04-17 23:12:56 [http-nio-28080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
