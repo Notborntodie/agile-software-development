@@ -1,7 +1,7 @@
 <template>
     <div class="Student2">
         <h1>成绩查看</h1>
-    
+        
         <table class="my-table">
         <thead>
           <tr>

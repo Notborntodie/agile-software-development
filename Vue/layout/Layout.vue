@@ -36,6 +36,9 @@
                 <el-menu-item index="/rbac/user/student2" @click="$router.push('/rbac/user/student2')">
                   学生成绩查看
                 </el-menu-item>
+                <el-menu-item index="/rbac/user/student3" @click="$router.push('/rbac/user/student3')">
+                  基础信息填报
+                </el-menu-item>
                 </el-submenu>
 
                 <el-menu-item index="/rbac/user/add" @click="$router.push('/rbac/user/add')">
