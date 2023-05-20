@@ -6,8 +6,8 @@
       </el-aside>
       <el-main>
         <div class="content">
-          <h1>Login Successful!</h1>
-          <p>Welcome, {{ username }}!</p>
+          <h1 style="color: black; text-align: center;">欢迎来到学生评测系统！</h1>
+          <p style="font-size: 18px; text-align: center;">Welcome, <span style="font-weight: bold;">{{ username }}</span> </p>
         </div>
       </el-main>
     </el-container>

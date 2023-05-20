@@ -6,7 +6,7 @@
             <img src="../assets/pku.png" alt="">
         </div>
         <div class="login-form">
-          <h3 class="login-title">欢迎院友</h3>
+          <h3 class="login-title">学生评测系统</h3>
           <el-form ref="form" :model="loginForm" :rules="rules" label-position="left" label-width="0">
             <el-form-item prop="username">
               <el-input v-model="loginForm.username" placeholder="请输入用户名"></el-input>
@@ -52,16 +52,15 @@
         this.$refs.form.validate(valid => {
           if (valid) {
             this.loading = true
-            /*
+            
             this.$axios
             .post('http://localhost:28080/admin-api/auth/login',
             {
             username: this.loginForm.username,
             password: this.loginForm.password
             })
-            */
+          
 
-            /*
             login(this.loginForm.username,this.loginForm.password)
             .then(res =>{
                 if (res.code===200){
@@ -70,7 +69,7 @@
                   this.$message.success('登录成功')
                   this.$router.push({ path: '/' })
                 }else{
-                  this.$message.error(res.message)
+                  this.$message.error('密码错误')
                   this.loading = false
                 }
             }).catch(() => {
@@ -78,8 +77,8 @@
               this.$message.error('错误')
               this.loading = false
             })
-            */
-            //this.$router.push({ path: '/' })
+            
+            this.$router.push({ path: '/' })
 
           }
         })

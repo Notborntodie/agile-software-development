@@ -2,7 +2,6 @@ import router from './router'
 
 import { getAccessToken } from '/utils/auth'
 
-/*
 
 router.beforeEach((to, from, next) => {
   if (getAccessToken()) {
@@ -25,4 +24,4 @@ router.afterEach(() => {
   
 })
 
-*/
+

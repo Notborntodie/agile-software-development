@@ -4,6 +4,9 @@
       导入学生名单
       <input type="file" @change="handleFileUpload">
     </label>
+
+
+  <!--
     <el-table
       :data="students"
       style="width: 100%">
@@ -22,7 +25,7 @@
         label="GPA">
       </el-table-column>
     </el-table>
-
+-->
 
     <table class="my-table">
     <thead>
@@ -49,7 +52,7 @@
         <td>{{ student.grade4 }}</td>
         <td>{{ student.grade5 }}</td>
         <td>{{ gradesum(index) }}</td>
-        <td> <button @click="addStudent(index)">添加</button></td>
+
         <td> <button @click="deleteStudent(index)">删除</button> </td>
       </tr>
     </tbody>
