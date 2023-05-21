@@ -1,4 +1,4 @@
-package com.web.test;
+package com.web.test.VO;
 
 import lombok.Data;
 

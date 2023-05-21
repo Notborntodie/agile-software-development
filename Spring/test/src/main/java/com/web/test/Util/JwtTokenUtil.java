@@ -1,4 +1,4 @@
-package com.web.test;
+package com.web.test.Util;
 
 import io.jsonwebtoken.JwtException;
 import io.jsonwebtoken.Jwts;

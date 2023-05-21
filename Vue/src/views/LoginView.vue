@@ -69,7 +69,7 @@
                   this.$message.success('登录成功')
                   this.$router.push({ path: '/' })
                 }else{
-                  this.$message.error('密码错误')
+                  this.$message.error(res.msg)
                   this.loading = false
                 }
             }).catch(() => {

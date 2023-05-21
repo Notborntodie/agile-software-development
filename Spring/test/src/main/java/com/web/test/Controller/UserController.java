@@ -1,10 +1,16 @@
-package com.web.test;
+package com.web.test.Controller;
 
+import com.web.test.DO.UserDemo;
+import com.web.test.VO.CommonResult;
+import com.web.test.Mapper.UserMapper;
+import com.web.test.VO.Userpass;
+import com.web.test.Util.JwtTokenUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+/*
 @RestController
 @RequestMapping("/admin-api/user/")
 public class UserController {
@@ -24,26 +30,26 @@ public class UserController {
         String token = authHeader.substring(7);
         String username = jwtTokenUtil.getUsernameFromToken(token);
         logger.info(username);
-        User foundUser = userMapper.findByUsername(username);
-        CommonResult<User> result = CommonResult.success(foundUser);
-        logger.info(foundUser.getName());
+        UserDemo foundUserDemo = userMapper.findByUsername(username);
+        CommonResult<UserDemo> result = CommonResult.success(foundUserDemo);
+        logger.info(foundUserDemo.getName());
         return result;
     }
 
     @PostMapping("/profile/changeinfo")
-    public CommonResult<?> login(@RequestHeader("Authorization") String authHeader,@RequestBody User user) {
+    public CommonResult<?> login(@RequestHeader("Authorization") String authHeader,@RequestBody UserDemo userDemo) {
 
-        CommonResult<User> result;
-        logger.info(user.getUsername());
+        CommonResult<UserDemo> result;
+        logger.info(userDemo.getUsername());
         String token = authHeader.substring(7);
         String username = jwtTokenUtil.getUsernameFromToken(token);
         logger.info(username);
-        User foundUser = userMapper.findByUsername(username);
-        if (username.equals(user.getUsername())){
+        UserDemo foundUserDemo = userMapper.findByUsername(username);
+        if (username.equals(userDemo.getUsername())){
             logger.info(username);
-            userMapper.changeinfo(user);
-            logger.info("new "+user.getName());
-            result = CommonResult.success(foundUser);
+            userMapper.changeinfo(userDemo);
+            logger.info("new "+ userDemo.getName());
+            result = CommonResult.success(foundUserDemo);
         }else {
             result=CommonResult.error(50007,"不能修改他人信息");
         }
@@ -52,19 +58,19 @@ public class UserController {
 
     @PostMapping("/profile/changepass")
     public CommonResult<?> login(@RequestHeader("Authorization") String authHeader,@RequestBody Userpass userpass) {
-        CommonResult<User> result;
+        CommonResult<UserDemo> result;
         logger.info("Hiii");
 
         String token = authHeader.substring(7);
         String username = jwtTokenUtil.getUsernameFromToken(token);
-        User foundUser = userMapper.findByUsername(username);
+        UserDemo foundUserDemo = userMapper.findByUsername(username);
         logger.info(username);
-        logger.info(foundUser.getUsername());
-        logger.info(foundUser.getPassword());
+        logger.info(foundUserDemo.getUsername());
+        logger.info(foundUserDemo.getPassword());
         if (username.equals(userpass.getUsername())){
-            if (foundUser.getPassword().equals(userpass.getOldpassword())){
+            if (foundUserDemo.getPassword().equals(userpass.getOldpassword())){
                 userMapper.changepass(userpass);
-                result = CommonResult.success(foundUser);
+                result = CommonResult.success(foundUserDemo);
             }else {
                 result=CommonResult.error(50006,"密码错误");
             }
@@ -77,3 +83,6 @@ public class UserController {
 
 
 }
+
+*/
+

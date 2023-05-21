@@ -1,9 +1,9 @@
-package com.web.test;
+package com.web.test.DO;
 
 import lombok.Data;
 
 @Data
-public class User {
+public class UserDemo {
     private String username;
     private String password;
 
@@ -12,10 +12,10 @@ public class User {
     private String phone;
     private String email;
 
-    public User() {
+    public UserDemo() {
     }
 
-    public User(String username, String password, String name, String idCard, String phone, String email) {
+    public UserDemo(String username, String password, String name, String idCard, String phone, String email) {
         this.username = username;
         this.password = password;
         this.name = name;

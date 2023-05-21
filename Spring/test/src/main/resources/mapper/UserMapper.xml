@@ -1,21 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.web.test.UserMapper">
-    <select id="findByUsername" resultType="com.web.test.User">
-        SELECT username, password,name,id_card,phone,email FROM user WHERE username = #{username}
+<mapper namespace="com.web.test.Mapper.UserMapper">
+
+
+    <insert id="insert" parameterType="com.web.test.DO.UserDemo">
+        INSERT INTO userDemo (username, password,name,id_card,phone,email) VALUES (#{username}, #{password},#{name}, #{idCard},#{phone}, #{email})
+    </insert>
+    <insert id="changeinfo" parameterType="com.web.test.DO.UserDemo">
+        UPDATE userDemo SET name=#{name},phone=#{phone},email= #{email} WHERE username = #{username}
+    </insert>
+
+    <insert id="changepass" parameterType="com.web.test.VO.Userpass">
+        UPDATE userDemo SET password=#{newpassword} WHERE username = #{username}
+    </insert>
+
+    <select id="getUser" resultType="com.web.test.DO.User" >
+        SELECT  id ,username,password FROM  user WHERE username=#{username}
     </select>
 
-    <insert id="insert" parameterType="com.web.test.User">
-        INSERT INTO user (username, password,name,id_card,phone,email) VALUES (#{username}, #{password},#{name}, #{idCard},#{phone}, #{email})
-    </insert>
-    <insert id="changeinfo" parameterType="com.web.test.User">
-        UPDATE user SET name=#{name},phone=#{phone},email= #{email} WHERE username = #{username}
-    </insert>
+    <select id="setUser" parameterType="com.web.test.DO.User" >
+        INSERT INTO user (username, password) VALUES (#{username}, #{password})
+    </select>
 
-    <insert id="changepass" parameterType="com.web.test.Userpass">
-        UPDATE user SET password=#{newpassword} WHERE username = #{username}
-    </insert>
+    <select id="setStudent" parameterType="com.web.test.DO.Student" >
+        INSERT INTO student
+            (UserId, Name, StudentNumber, Gender, PhoneNumber, Email, Year, AcademyDictionary, MajorDictionary, PoliticalStatusDictionary, StudentTypeDictionary)
+        VALUES (#{UserId}, #{Name},#{StudentNumber},#{Gender},#{PhoneNumber},
+                #{Email},#{Year}, #{AcademyDictionary}, #{MajorDictionary},
+               #{PoliticalStatusDictionary},#{StudentTypeDictionary})
+    </select>
+
+
+    <select id="getStudentByUid" resultType="com.web.test.DO.Student" >
+        SELECT id ,UserId, Name, StudentNumber,
+               Gender, PhoneNumber, Email, Year, AcademyDictionary,
+               MajorDictionary, PoliticalStatusDictionary, StudentTypeDictionary
+         FROM student WHERE  UserId=#{UserId}
+    </select>
+
+
+
+    <select id="getStudentBySid" resultType="com.web.test.DO.Student" >
+        SELECT id ,UserId, Name, StudentNumber,
+               Gender, PhoneNumber, Email, Year, AcademyDictionary,
+               MajorDictionary, PoliticalStatusDictionary, StudentTypeDictionary
+        FROM student WHERE  id=#{studentId}
+    </select>
+
+
+
+    <select id="setGradeSummary" parameterType="com.web.test.DO.GradeSummary">
+        INSERT INTO GradeSummary
+        ( StudentId, SocialPracticeGrade, ResearchGrade, VolunteerServiceGrade, AcademicGrade,
+         StudentLeadershipGrade, PersonalSummaryGrade, SumGrade)
+        VALUES ( #{studentId}, #{socialPracticeGrade}, #{researchGrade}, #{volunteerServiceGrade},
+                #{academicGrade}, #{studentLeadershipGrade}, #{personalSummaryGrade}, #{sumGrade})
+    </select>
+
+    <select id="getAllGrade" resultType="com.web.test.DO.GradeSummary">
+        SELECT ID, StudentId, SocialPracticeGrade, ResearchGrade, VolunteerServiceGrade,
+               AcademicGrade, StudentLeadershipGrade, PersonalSummaryGrade, SumGrade
+        FROM GradeSummary
+    </select>
+
+    <select id="getAllPersonalSummary" resultType="com.web.test.DO.PersonalSummary">
+        SELECT  ID, StudentId,PersonalSummaryContent
+        FROM   PersonalSummary
+    </select>
+
+    <select id="findByPersonalSummaryContent" resultType="com.web.test.DO.PersonalSummary" parameterType="java.lang.String">
+        SELECT ID, StudentId, PersonalSummaryContent
+        FROM PersonalSummary
+        WHERE PersonalSummaryContent = #{PersonalSummaryContent}
+    </select>
+
+    <update id="updatePersonalSummaryGrade" parameterType="com.web.test.DO.GradeSummary">
+        UPDATE gradesummary
+        SET PersonalSummaryGrade = #{personalSummaryGrade}
+        WHERE StudentId = #{studentId}
+    </update>
+
+
+    <select id="findByStudentId" parameterType="int" resultType="com.web.test.DO.GradeSummary">
+        SELECT * FROM  GradeSummary WHERE  studentId= #{studentId}
+    </select>
+
+    
+    <select id="findByUsername"   resultType="com.web.test.DO.Student">
+        SELECT * FROM Student WHERE StudentNumber=#{username}
+    </select>
+
+
+
 
 
 

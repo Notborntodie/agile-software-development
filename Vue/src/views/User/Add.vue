@@ -1,10 +1,10 @@
 <template>
-  <div class="add-user">
-    <h1>修改用户密码</h1>
+  <div class="container">
+    <h1 class="page-title">用户信息</h1>
+
+    <el-collapse v-model="activeNames"> 
+      <el-collapse-item title="修改密码" name="1">
     <el-form ref="form" :model="user" :rules="rules" label-width="100px">
-      <el-form-item label="用户名" prop="username">
-        <el-input v-model="user.username"></el-input>
-      </el-form-item>
       <el-form-item label="旧密码" prop="oldpassword">
         <el-input v-model="user.oldpassword"></el-input>
       </el-form-item>
@@ -12,11 +12,12 @@
         <el-input v-model="user.newpassword"></el-input>
       </el-form-item>
       <el-form-item>
-        <el-button type="primary" @click="submitForm">提交</el-button>
-        <el-button @click="resetForm">重置</el-button>
+        <el-button class="custom-button" size="small" plain @click="submitForm">提交</el-button>
+        <el-button  class="custom-button" size="small" plain @click="resetForm">重置</el-button>
       </el-form-item>
     </el-form>
-
+    </el-collapse-item>
+  </el-collapse>
 
    
 
@@ -25,7 +26,7 @@
 
 <script>
 
-import {changepass} from '/api/login.js'
+import {changepass} from '/api/login.js'  
 export default {
 
 
@@ -44,25 +45,6 @@ export default {
         oldpassword: [{ required: true, message: "请输入旧密码", trigger: "blur" }],
         newpassword: [{ required: true, message: "请输入新密码", trigger: "blur" }],
       },
-
-      tableData: [{
-            date: '2016-05-02',
-            name: '王小虎',
-            address: '上海市普陀区金沙江路 1518 弄'
-          }, {
-            date: '2016-05-04',
-            name: '王小虎',
-            address: '上海市普陀区金沙江路 1517 弄'
-          }, {
-            date: '2016-05-01',
-            name: '王小虎',
-            address: '上海市普陀区金沙江路 1519 弄'
-          }, {
-            date: '2016-05-03',
-            name: '王小虎',
-            address: '上海市普陀区金沙江路 1516 弄'
-          }]
-
     };
   },
   methods: {
@@ -99,5 +81,18 @@ export default {
 <style>
 .add-user {
   padding: 20px;
+}
+
+.container {
+  padding: 20px;
+}
+
+.page-title {
+  font-family: 'San Francisco', Arial, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #6699CC;
+  letter-spacing: -0.5px;
+  text-align: center;
 }
 </style>

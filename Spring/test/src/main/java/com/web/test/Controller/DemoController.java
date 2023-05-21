@@ -1,12 +1,15 @@
-package com.web.test;
+package com.web.test.Controller;
 
 
+import com.web.test.VO.CommonResult;
+import com.web.test.DO.UserDemo;
+import com.web.test.Mapper.UserMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-
+/*
 @RestController
 public class DemoController {
 
@@ -19,11 +22,14 @@ public class DemoController {
     public CommonResult<?> Hello(){
         System.out.println("This is a system.out message");
         logger.info("This is an info log message");
-        User foundUser = userMapper.findByUsername("Bob");
+        UserDemo foundUserDemo = userMapper.findByUsername("Bob");
 
-        if (foundUser == null) {
+        if (foundUserDemo == null) {
             return CommonResult.success("用户不存在");
         }
-        return CommonResult.success(foundUser.getPassword());
+        return CommonResult.success(foundUserDemo.getPassword());
     }
 }
+
+
+ */
