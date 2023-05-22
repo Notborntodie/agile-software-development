@@ -3,6 +3,8 @@ package com.web.test.DO;
 import lombok.Data;
 
 @Data
+
+
 public class Student {
     private int Id;
     private int UserId;

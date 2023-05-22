@@ -45,46 +45,38 @@ export function setTable1(tableData1){
 }
 
 export function setTable2(tableData2) {
-    const data = {
-        tableData2
-    }
+   
     return request({
         url: '/grade/setTableresearch_status',
         method: 'post',
-        data: data
+        data: tableData2
     })
 }
 
 
 export function setTable3(tableData3) {
-    const data = {
-        tableData3
-    }
+  
     return request({
         url: '/grade/setTablestudent_service',
         method: 'post',
-        data: data
+        data: tableData3
     })
 }
 
 export function setTable4(tableData4) {
-    const data = {
-        tableData4
-    }
+   
     return request({
         url: '/grade/setTablesocial_practice',
         method: 'post',
-        data: data
+        data: tableData4
     })
 }
 
 export function setTable5(tableData5) {
-    const data = {
-        tableData5
-    }
+  
     return request({
         url: '/grade/setTablevolunteer_service',
         method: 'post',
-        data: data
+        data: tableData5
     })
 }

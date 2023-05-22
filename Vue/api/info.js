@@ -19,6 +19,23 @@ export function changeEvainfo(user){
   })
 }
 
+export function getBasicinfo(){
+    return request({
+        url: 'student/getBasicinfo',
+        method: 'get',
+    })
+}
+
+
+
+export function changeBasicinfo(user){
+    return  request({
+        url:'student/changeBasicinfo',
+        method : 'post',
+        data: user
+    })
+}
+
 
 
 

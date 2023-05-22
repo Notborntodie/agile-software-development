@@ -71,7 +71,11 @@
       <el-collapse-item title="评审打分" name="2">
         <!-- Update table to el-table -->
         <el-table :data="paginatedData" style="width: 100%">
-          <el-table-column prop="index" label="序号" align="center"></el-table-column>
+          <el-table-column label="序号" align="center">
+                 <template slot-scope="{ row, $index }">
+                      <span>{{ $index + 1 }}</span>
+               </template>
+          </el-table-column>
           <el-table-column prop="content" label="内容" align="center"></el-table-column>
           <el-table-column label="打分" align="right">
             <template slot-scope="{ row }">
@@ -92,7 +96,7 @@
 
         <div style="margin-top: 20px">
           <el-button class="custom-button" size="small" plain  @click="handleSave">保存</el-button>
-          <el-button  class="custom-button" size="small" plain  @click="handleSubmit1">提交</el-button>
+          <el-button  class="custom-button" size="small" plain  @click="handleSubmit">提交</el-button>
         </div>
       </el-collapse-item>
   </el-collapse>
@@ -266,8 +270,36 @@ async handleSubmit() {
 }
 
 ,
-*/
-      async  handleSubmit1(){
+*/ handleSubmit() {
+  //this.$message.success(this.selectedCategory);
+  
+  if (this.selectedCategory == 'personal') {
+        this.handleSubmit1()
+        //this.$message.success(this.selectedCategory);
+      // Trigger event for '个人学年总结'
+    } else if (this.selectedCategory == 'research') {
+        this.handleSubmit2()
+      // Trigger event for '科研情况'
+    } else if (this.selectedCategory == 'service') {
+      this.handleSubmit3()
+
+      // Trigger event for '学生骨干服务岗位'
+    } else if (this.selectedCategory == 'practice') {
+      this.handleSubmit4()
+      
+      // Trigger event for '社会实践'
+    } else if (this.selectedCategory == 'volunteer') {
+      this.handleSubmit5()
+      // Trigger event for '志愿服务'
+    } else {
+      //this.$message.success();
+      // Trigger default event or error handling
+    }
+  },
+  
+    handleSubmit1(){
+
+          //this.$message.success(this.selectedCategory);
           this.storageKey = 'personal_summary';
           const data = localStorage.getItem(this.storageKey);
             if (data) {
@@ -282,20 +314,18 @@ async handleSubmit() {
             //this.$message.success();
 
             try {
-              let response = await setTable1(this.tableData1);
-              if (response.code === 200) {
-                this.$message({
-                message: '提交成功！',
-                type: 'success'
-                });
-                console.log('评分数据已提交：', this.tableData1);
-              } else {
-                  
-                this.$message({
-                  message: '提交失败1',
-                  type: 'error'});
-                
+
+            setTable1(this.tableData1)
+            .then((res) => {
+              if (res.code==200){
+                this.$message.success('提交成功')
               }
+            })
+            .catch((err) => {
+              console.error(err)
+              this.$message.error('提交失败1')
+            })
+          
           } catch (error) {
           console.error(error);
           
@@ -304,10 +334,11 @@ async handleSubmit() {
             type: 'error'
           })
           
+          
           }
         }
 ,
-        async handleSubmit2() {
+    handleSubmit2() {
     this.storageKey = 'research_status';
     const data = localStorage.getItem(this.storageKey);
     if (data) {
@@ -320,34 +351,28 @@ async handleSubmit() {
         }
     }
     try {
-        let response = await setTable2(this.tableData2);
-        if (response.code === 200) {
-            /*this.$message({
-                message: '提交成功！',
-                type: 'success'
-            });
-            */
-            console.log('评分数据已提交：', this.tableData2);
-        } else {
-          /*
-            this.$message({
-                message: '提交失败，请重试！',
-                type: 'error'
-            });
-            */
-        }
-    } catch (error) {
+      setTable2(this.tableData2)
+            .then((res) => {
+              if (res.code==200){
+                this.$message.success('提交成功')
+              }
+            })
+            .catch((err) => {
+              console.error(err)
+              this.$message.error('提交失败1')
+            })
+        }catch (error) {
         console.error(error);
-        /*
+        
         this.$message({
             message: '提交失败，请重试！',
             type: 'error'
         });
-        */
+        
     }
 },
 // 类似地，你可以创建 handleSubmit3， handleSubmit4 和 handleSubmit5
-async handleSubmit3() {
+ handleSubmit3() {
     // 代码类似 handleSubmit2，只是将所有的 "tableData2" 和 "setTable2" 替换为 "tableData3" 和 "setTable3"， "this.storageKey" 的值设置为 'student_service'
     this.storageKey = 'student_service';
     const data = localStorage.getItem(this.storageKey);
@@ -361,33 +386,28 @@ async handleSubmit3() {
         }
     }
     try {
-        let response = await setTable3(this.tableData3);
-        if (response.code === 200) {
-            /*this.$message({
-                message: '提交成功！',
-                type: 'success'
-            });
-            */
-            console.log('评分数据已提交：', this.tableData3);
-        } else {
-          /*
-            this.$message({
-                message: '提交失败，请重试！',
-                type: 'error'
-            });
-            */
-        }
+      setTable3(this.tableData3)
+            .then((res) => {
+              if (res.code==200){
+                this.$message.success('提交成功')
+              }
+            })
+            .catch((err) => {
+              console.error(err)
+              this.$message.error('提交失败1')
+            })
+       
     } catch (error) {
         console.error(error);
-        /*
+        
         this.$message({
             message: '提交失败，请重试！',
             type: 'error'
         });
-        */
+        
     }
 },
-async handleSubmit4() {
+handleSubmit4() {
     // 代码类似 handleSubmit2，只是将所有的 "tableData2" 和 "setTable2" 替换为 "tableData4" 和 "setTable4"， "this.storageKey" 的值设置为 'social_practice'
      
      this.storageKey = 'social_practice';
@@ -402,34 +422,28 @@ async handleSubmit4() {
         }
     }
     try {
-        let response = await setTable4(this.tableData4);
-        if (response.code === 200) {
-            /*this.$message({
-                message: '提交成功！',
-                type: 'success'
-            });
-            */
-            console.log('评分数据已提交：', this.tableData4);
-        } else {
-          /*
-            this.$message({
-                message: '提交失败，请重试！',
-                type: 'error'
-            });
-            */
-        }
+      setTable4(this.tableData4)
+            .then((res) => {
+              if (res.code==200){
+                this.$message.success('提交成功')
+              }
+            })
+            .catch((err) => {
+              console.error(err)
+              this.$message.error('提交失败1')
+            })
     } catch (error) {
         console.error(error);
-        /*
+        
         this.$message({
             message: '提交失败，请重试！',
             type: 'error'
         });
-        */
+      
     }
    
 },
-async handleSubmit5() {
+handleSubmit5() {
     // 代码类似 handleSubmit2，只是将所有的 "tableData2" 和 "setTable2" 替换为 "tableData5" 和 "setTable5"， "this.storageKey" 的值设置为 'volunteer_service'
 
     this.storageKey = 'volunteer_service';
@@ -444,30 +458,23 @@ async handleSubmit5() {
         }
     }
     try {
-        let response = await setTable5(this.tableData5);
-        if (response.code === 200) {
-            /*this.$message({
-                message: '提交成功！',
-                type: 'success'
-            });
-            */
-            console.log('评分数据已提交：', this.tableData5);
-        } else {
-          /*
-            this.$message({
-                message: '提交失败，请重试！',
-                type: 'error'
-            });
-            */
-        }
+      setTable5(this.tableData5)
+            .then((res) => {
+              if (res.code==200){
+                this.$message.success('提交成功')
+              }
+            })
+            .catch((err) => {
+              console.error(err)
+              this.$message.error('提交失败1')
+            })
     } catch (error) {
         console.error(error);
-        /*
+
         this.$message({
             message: '提交失败，请重试！',
             type: 'error'
         });
-        */
     }
 
 }
@@ -491,7 +498,7 @@ async handleSubmit5() {
  
             const response2 = await getTable2();
             this.tableData2 = response2.data;
-
+    
             const response3 = await getTable3();
             this.tableData3 = response3.data;
 

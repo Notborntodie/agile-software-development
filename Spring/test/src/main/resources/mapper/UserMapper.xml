@@ -32,6 +32,22 @@
     </select>
 
 
+    <update id="updateStudent" parameterType="com.web.test.DO.Student">
+        UPDATE student
+        SET Name = #{Name},
+            StudentNumber = #{StudentNumber},
+            Gender = #{Gender},
+            PhoneNumber = #{PhoneNumber},
+            Email = #{Email},
+            Year = #{Year},
+            AcademyDictionary = #{AcademyDictionary},
+            MajorDictionary = #{MajorDictionary},
+            PoliticalStatusDictionary = #{PoliticalStatusDictionary},
+            StudentTypeDictionary = #{StudentTypeDictionary}
+        WHERE  UserId = #{UserId}
+    </update>
+
+
     <select id="getStudentByUid" resultType="com.web.test.DO.Student" >
         SELECT id ,UserId, Name, StudentNumber,
                Gender, PhoneNumber, Email, Year, AcademyDictionary,
@@ -69,17 +85,75 @@
         FROM   PersonalSummary
     </select>
 
+
+    <select id="getAllResearch" resultType="com.web.test.DO.Research">
+        SELECT ID, StudentId, ResearchContent
+        FROM Research
+    </select>
+
+    <select id="getAllVolunteerService" resultType="com.web.test.DO.VolunteerService">
+        SELECT ID, StudentId, VolunteerServiceContent
+        FROM VolunteerService
+    </select>
+
+    <select id="getAllSocialPractice" resultType="com.web.test.DO.SocialPractice">
+        SELECT ID, StudentId, SocialPracticeContent
+        FROM SocialPractice
+    </select>
+
+    <select id="getAllStudentLeadership" resultType="com.web.test.DO.StudentLeadership">
+        SELECT ID, StudentId, StudentLeadershipContent
+        FROM StudentLeadership
+    </select>
+
+
+
+
+
+
+
+
     <select id="findByPersonalSummaryContent" resultType="com.web.test.DO.PersonalSummary" parameterType="java.lang.String">
         SELECT ID, StudentId, PersonalSummaryContent
         FROM PersonalSummary
         WHERE PersonalSummaryContent = #{PersonalSummaryContent}
     </select>
 
+
+
     <update id="updatePersonalSummaryGrade" parameterType="com.web.test.DO.GradeSummary">
         UPDATE gradesummary
         SET PersonalSummaryGrade = #{personalSummaryGrade}
         WHERE StudentId = #{studentId}
     </update>
+
+    <update id="updateResearchGrade" parameterType="com.web.test.DO.GradeSummary">
+        UPDATE gradesummary
+        SET  ResearchGrade=#{researchGrade}
+        WHERE StudentId = #{studentId}
+    </update>
+
+    <update id="updateStudentLeadershipGrade" parameterType="com.web.test.DO.GradeSummary">
+        UPDATE gradesummary
+        SET  StudentLeadershipGrade=#{studentLeadershipGrade}
+        WHERE StudentId = #{studentId}
+    </update>
+
+    <update id="updatesocialPracticeGrade" parameterType="com.web.test.DO.GradeSummary">
+        UPDATE gradesummary
+        SET socialPracticeGrade=#{socialPracticeGrade}
+        WHERE StudentId = #{studentId}
+    </update>
+
+    <update id="updateVolunteerServiceGrade" parameterType="com.web.test.DO.GradeSummary">
+        UPDATE gradesummary
+        SET  VolunteerServiceGrade=#{volunteerServiceGrade}
+        WHERE StudentId = #{studentId}
+    </update>
+
+
+
+
 
 
     <select id="findByStudentId" parameterType="int" resultType="com.web.test.DO.GradeSummary">
@@ -90,6 +164,98 @@
     <select id="findByUsername"   resultType="com.web.test.DO.Student">
         SELECT * FROM Student WHERE StudentNumber=#{username}
     </select>
+
+
+
+
+
+    <select id="psfindBysid" resultType="com.web.test.DO.PersonalSummary">
+        SELECT * FROM PersonalSummary WHERE StudentId = #{studentId};
+    </select>
+
+    <select id="insertps" parameterType="com.web.test.DO.PersonalSummary">
+        INSERT INTO PersonalSummary (StudentId, PersonalSummaryContent)
+        VALUES (#{studentId}, #{PersonalSummaryContent});
+    </select>
+
+    <update id="updateps" parameterType="com.web.test.DO.PersonalSummary">
+        UPDATE PersonalSummary
+        SET PersonalSummaryContent = #{PersonalSummaryContent}
+        WHERE StudentId = #{studentId};
+    </update>
+
+
+    <!-- Research -->
+    <select id="rfindBysid" resultType="com.web.test.DO.Research">
+        SELECT * FROM Research WHERE StudentId = #{studentId};
+    </select>
+
+    <insert id="insertr" parameterType="com.web.test.DO.Research">
+        INSERT INTO Research (StudentId, ResearchContent)
+        VALUES (#{studentId}, #{researchContent});
+    </insert>
+
+    <update id="updater" parameterType="com.web.test.DO.Research">
+        UPDATE Research
+        SET ResearchContent = #{researchContent}
+        WHERE StudentId = #{studentId};
+    </update>
+
+    <!-- SocialPractice -->
+    <select id="spfindBysid" resultType="com.web.test.DO.SocialPractice">
+        SELECT * FROM SocialPractice WHERE StudentId = #{studentId};
+    </select>
+
+    <insert id="insertsp" parameterType="com.web.test.DO.SocialPractice">
+        INSERT INTO SocialPractice (StudentId, SocialPracticeContent)
+        VALUES (#{studentId}, #{socialPracticeContent});
+    </insert>
+
+    <update id="updatesp" parameterType="com.web.test.DO.SocialPractice">
+        UPDATE SocialPractice
+        SET SocialPracticeContent = #{socialPracticeContent}
+        WHERE StudentId = #{studentId};
+    </update>
+
+    <!-- StudentLeadership -->
+    <select id="slfindBysid" resultType="com.web.test.DO.StudentLeadership">
+        SELECT * FROM StudentLeadership WHERE StudentId = #{studentId};
+    </select>
+
+    <insert id="insertsl" parameterType="com.web.test.DO.StudentLeadership">
+        INSERT INTO StudentLeadership (StudentId, StudentLeadershipContent)
+        VALUES (#{studentId}, #{StudentLeadershipContent});
+    </insert>
+
+    <update id="updatesl" parameterType="com.web.test.DO.StudentLeadership">
+        UPDATE StudentLeadership
+        SET StudentLeadershipContent = #{StudentLeadershipContent}
+        WHERE StudentId = #{studentId};
+    </update>
+
+    <!-- VolunteerService -->
+    <select id="vsfindBysid" resultType="com.web.test.DO.VolunteerService">
+        SELECT * FROM VolunteerService WHERE StudentId = #{studentId};
+    </select>
+
+    <insert id="insertvs" parameterType="com.web.test.DO.VolunteerService">
+        INSERT INTO VolunteerService (StudentId, VolunteerServiceContent)
+        VALUES (#{studentId}, #{VolunteerServiceContent});
+    </insert>
+
+    <update id="updatevs" parameterType="com.web.test.DO.VolunteerService">
+        UPDATE VolunteerService
+        SET VolunteerServiceContent = #{VolunteerServiceContent}
+        WHERE StudentId = #{studentId};
+    </update>
+
+
+
+
+
+
+
+
 
 
 

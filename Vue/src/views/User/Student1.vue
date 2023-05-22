@@ -67,7 +67,7 @@
     </el-col>
     <el-col :span="12">
         <el-form-item label="学号" prop="StudentNumber">
-          <el-input v-model="user2.StudentNumber" readonly></el-input>
+          <el-input v-model="user2.studentNumber" readonly></el-input>
         </el-form-item>
     </el-col>
     </el-row>
@@ -82,7 +82,7 @@
     </el-col>
     <el-col :span="12">
         <el-form-item label="学生类型" prop="StudentType">
-          <el-select v-model="user2.StudentType" >
+          <el-select v-model="user2.studentTypeDictionary" >
             <el-option label="二学位" value="二学位"></el-option>
         <el-option label="专业硕士" value="专业硕士"></el-option>
         <el-option label="工程博士" value="工程博士"></el-option>
@@ -93,22 +93,22 @@
     </el-col>
     </el-row>
         <el-form-item label="手机号" prop="PhoneNumber">
-          <el-input v-model="user2.PhoneNumber"></el-input>
+          <el-input v-model="user2.phoneNumber"></el-input>
         </el-form-item>
         <el-form-item label="邮箱" prop="Email">
-          <el-input v-model="user2.Email"></el-input>
+          <el-input v-model="user2.email"></el-input>
         </el-form-item>
         <el-form-item label="年份" prop="year">
           <el-input v-model="user2.year"></el-input>
         </el-form-item>
         <el-form-item label="学苑" prop="Academy">
-          <el-input v-model="user2.Academy" ></el-input>
+          <el-input v-model="user2.academyDictionary" ></el-input>
         </el-form-item>
         <el-form-item label="专业" prop="Major">
-          <el-input v-model="user2.Major"></el-input>
+          <el-input v-model="user2.majorDictionary"></el-input>
         </el-form-item>
         <el-form-item label="政治面貌" prop="PoliticalStatus">
-          <el-input v-model="user2.PoliticalStatus"></el-input>
+          <el-input v-model="user2.politicalStatusDictionary"></el-input>
         </el-form-item>
        
         <el-form-item>
@@ -176,6 +176,8 @@
   //import { changeinfo } from '@/api/login'
   import { getEvainfo} from '/api/info'
   import { changeEvainfo } from '/api/info'
+  import {getBasicinfo} from  '/api/info'
+  import { changeBasicinfo } from '/api/info'
   export default {
     name: 'AddUser',
     data() {
@@ -239,9 +241,14 @@
     },
     async mounted() {
   // 页面加载时从本地存储中读取用户数据
-          const response = await getEvainfo()
-          if (response.code==200){
-            this.user=response.data
+          const response1 = await getEvainfo()
+          if (response1.code==200){
+            this.user=response1.data
+            //this.$message.success(response.data.name)
+          }
+          const response2=await getBasicinfo()
+          if (response2.code==200){
+            this.user2=response2.data
             //this.$message.success(response.data.name)
           }
           this.getUserData()
@@ -297,25 +304,28 @@
           
           
           submitForm2() {
-              this.$refs.form.validate((valid) => {
-              if (valid) {
-              changeinfo(this.user)
-              .then(() => {
-                  this.$message.success('提交成功')
-                  this.$router.push('/')
-                })
-              .catch((err) => {
+            const data = localStorage.getItem(this.storageKey2)
+            if (data) {
+              this.user2 = JSON.parse(data)
+            }
+            //this.$message.success('开始')
+
+            changeBasicinfo(this.user2)
+            .then((res) => {
+              if (res.code==200){
+                this.$message.success('提交成功')
+                localStorage.removeItem(this.storageKey)
+              }
+            })
+            .catch((err) => {
               console.error(err)
               this.$message.error('提交失败')
-              })
-              } else {
-              console.log('error submit!!')
-                  return false
-                 }
-                })
-              },
+            })
+          },
+
+
           saveForm2() {
-              localStorage.setItem(this.storageKey, JSON.stringify(this.user2))
+              localStorage.setItem(this.storageKey2, JSON.stringify(this.user2))
                   this.$message.success('保存成功')
               },
           getUserData2() {

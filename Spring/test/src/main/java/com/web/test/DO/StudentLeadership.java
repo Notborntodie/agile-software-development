@@ -19,5 +19,7 @@ public class StudentLeadership {
         this.StudentId = StudentId;
         this.StudentLeadershipContent= StudentLeadershipContent;
     }
+
+
 }
 
