@@ -4,7 +4,9 @@
 
 
     <el-collapse v-model="activeNames">
-  <el-collapse-item title="学生评测信息填报" name="1">
+      <el-collapse-item title="学生评测信息" name="0">
+        </el-collapse-item>
+  <el-collapse-item title="评测信息填报" name="1">
     <el-form ref="form" :model="user" :rules="rules" label-width="200px">
       <el-row>
         <el-col :span="8">
@@ -54,7 +56,7 @@
 
 
 
-  <el-collapse-item title="学生基本信息填报" name="2">
+  <el-collapse-item title="学生基本信息" name="2">
     <el-form ref="form" :model="user2" :rules="rules2" label-width="120px">
         
         <el-row>
@@ -154,6 +156,9 @@
 </el-table>
 
   </el-collapse-item>
+
+  <el-collapse-item title="反馈" name="5">
+        </el-collapse-item>
 </el-collapse>
 
     
@@ -201,27 +206,27 @@
 
         user2: {
         name: '',
-        StudentNumber: '',
+        studentNumber: '',
         gender: '',
-        PhoneNumber: '',
+        phoneNumber: '',
         Email: '',
         year: '', 
-        Academy: '',
-        Major: '',
-        PoliticalStatus: '',
-        StudentType: ''
+        academyDictionary: '',
+        majorDictionary: '',
+        politicalStatusDictionary: '',
+        studentTypeDictionary: ''
         },
         rules2: {
         //   name: [{ required: true, message: '请输入姓名', trigger: 'blur' }],
         //   StudentNumber: [{ required: true, message: '请输入学号', trigger: 'blur' }],
           gender: [{ required: true, message: '请选择性别', trigger: 'blur' }],
-          PhoneNumber: [{ required: true, message: '请输入电话号码', trigger: 'blur' }],
-          Email: [{ required: true, message: '请输入邮箱', trigger: 'blur' }],
+          phoneNumber: [{ required: true, message: '请输入电话号码', trigger: 'blur' }],
+          email: [{ required: true, message: '请输入邮箱', trigger: 'blur' }],
           year: [{ required: true, message: '请输入年份', trigger: 'blur' }],
-          Academy: [{ required: true, message: '请输入学苑', trigger: 'blur' }],
-          Major: [{ required: true, message: '请输入专业', trigger: 'blur' }],
-          PoliticalStatus: [{ required: true, message: '请输入政治面貌', trigger: 'blur' }],
-          StudentType: [{ required: true, message: '请选择学生类别', trigger: 'blur' }],
+          academyDictionary: [{ required: true, message: '请输入学苑', trigger: 'blur' }],
+          majorDictionary: [{ required: true, message: '请输入专业', trigger: 'blur' }],
+          politicalStatusDictionary: [{ required: true, message: '请输入政治面貌', trigger: 'blur' }],
+          studentTypeDictionary: [{ required: true, message: '请选择学生类别', trigger: 'blur' }],
         },
         storageKey2: 'user2_data', // 存储在本地的键名
 
@@ -248,11 +253,25 @@
             if (data) {
               this.user = JSON.parse(data)
             }
-            this.$refs.form.validate((valid) => {
+            //this.$message.success('开始')
+
+            changeEvainfo(this.user)
+            .then((res) => {
+              if (res.code==200){
+                this.$message.success('提交成功')
+                localStorage.removeItem(this.storageKey)
+              }
+            })
+            .catch((err) => {
+              console.error(err)
+              this.$message.error('提交失败')
+            })
+            /*this.$refs.form.validate((valid) => {
               if (valid) {
                 changeEvainfo(this.user)
                   .then(() => {
                     this.$message.success('提交成功')
+                    localStorage.removeItem(this.storageKey)
                   })
                   .catch((err) => {
                     console.error(err)
@@ -261,7 +280,7 @@
               } else {
                 console.log('error submit!!')
               }
-            })
+            })*/
           },
 
           saveForm() {

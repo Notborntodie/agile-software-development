@@ -68,7 +68,7 @@
               </collapse-transition>
               </el-menu>
     
-              <div class="main-content">
+              <div class="main-content" >
                   <router-view/>
               </div>
           </div>
@@ -84,6 +84,7 @@ export default {
     logout() {
       this.$confirm('确定注销并退出系统吗？', '提示').then(() => {
         removeToken()
+        localStorage.clear()
         this.$router.push({ path: '/login' })
       }).catch(() => {});
     },

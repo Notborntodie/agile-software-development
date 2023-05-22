@@ -5885,3 +5885,12 @@ Caused by: java.lang.IllegalArgumentException: Mapped Statements collection alre
 2023-05-21 23:33:06 [http-nio-28080-exec-2] INFO  c.w.t.Controller.StudentController - 李四
 2023-05-21 23:33:58 [http-nio-28080-exec-3] INFO  c.w.t.Controller.StudentController - 2202
 2023-05-21 23:33:58 [http-nio-28080-exec-3] INFO  c.w.t.Controller.StudentController - 李四
+2023-05-21 23:49:13 [http-nio-28080-exec-5] INFO  c.web.test.Controller.AuthController - 2201
+2023-05-21 23:49:13 [http-nio-28080-exec-6] INFO  c.web.test.Controller.AuthController - 2201
+2023-05-21 23:49:13 [http-nio-28080-exec-5] INFO  c.web.test.Controller.AuthController - 2201
+2023-05-21 23:49:13 [http-nio-28080-exec-6] INFO  c.web.test.Controller.AuthController - 2201
+2023-05-21 23:49:13 [http-nio-28080-exec-5] INFO  c.web.test.Controller.AuthController - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMjAxIiwiZXhwIjoxNjg0Njg3NzUzLCJpYXQiOjE2ODQ2ODQxNTN9.GNYlsiCjoKeJDi4Ca42VsxuBswzHQLYtVn4X6_gnlSA
+2023-05-21 23:49:13 [http-nio-28080-exec-6] INFO  c.web.test.Controller.AuthController - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMjAxIiwiZXhwIjoxNjg0Njg3NzUzLCJpYXQiOjE2ODQ2ODQxNTN9.GNYlsiCjoKeJDi4Ca42VsxuBswzHQLYtVn4X6_gnlSA
+2023-05-21 23:49:13 [http-nio-28080-exec-7] WARN  o.s.web.servlet.PageNotFound - No mapping for OPTIONS /admin-api/user/profile/get
+2023-05-21 23:49:15 [http-nio-28080-exec-8] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-21 23:49:15 [http-nio-28080-exec-8] INFO  c.w.t.Controller.StudentController - 张三
