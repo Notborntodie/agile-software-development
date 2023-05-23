@@ -2,7 +2,12 @@ import request from '/utils/request'
 
 
 
-
+export function getInfo(){
+    return request({
+        url: 'student/getInfo',
+        method:'get',
+    })
+} 
 export function getEvainfo(){
     return request({
         url: 'student/getEvainfo',

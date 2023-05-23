@@ -3,7 +3,70 @@
     <h1 class="page-title">学生页面</h1>
     <el-collapse v-model="activeNames">
       <el-collapse-item title="学生评测信息" name="0">
-        </el-collapse-item>
+        
+  <el-table :data="[uu]" style="width: 100%">
+    <el-table-column prop="name" label="姓名">
+      <template slot-scope="{row}">{{ row.name }}</template>
+    </el-table-column>
+    <el-table-column prop="studentNumber" label="学号">
+      <template slot-scope="{row}">{{ row.studentNumber }}</template>
+    </el-table-column>
+    <el-table-column prop="academicGrade" label="GPA">
+      <template slot-scope="{row}">{{ row.academicGrade }}</template>
+    </el-table-column>
+    <el-table-column prop="researchContent" label="科研经历">
+      <template slot-scope="{row}">{{ row.researchContent }}</template>
+    </el-table-column>
+    <el-table-column prop="studentLeadershipContent" label="学生骨干服务岗位">
+      <template slot-scope="{row}">{{ row.studentLeadershipContent }}</template>
+    </el-table-column>
+    <el-table-column prop="socialPracticeContent" label="社会实践经历">
+      <template slot-scope="{row}">{{ row.socialPracticeContent }}</template>
+    </el-table-column>
+    <el-table-column prop="volunteerServiceContent" label="志愿服务经历">
+      <template slot-scope="{row}">{{ row.volunteerServiceContent }}</template>
+    </el-table-column>
+    <el-table-column prop="personalSummaryContent" label="个人学年总结">
+      <template slot-scope="{row}">{{ row.personalSummaryContent }}</template>
+    </el-table-column>
+  </el-table>
+</el-collapse-item>
+
+
+
+
+<el-collapse-item title="学生成绩查看" name="3">
+    <el-table :data="students" style="width: 100%">
+    <el-table-column prop="name" label="姓名" width="10%">
+        <template slot-scope="{row}">{{ row.name }}</template>
+    </el-table-column>
+    <el-table-column prop="id" label="学号" >
+        <template slot-scope="{row}">{{ row.id }}</template>
+    </el-table-column>
+    <el-table-column prop="gpa" label="GPA">
+        <template slot-scope="{row}">{{ row.gpa }}</template>
+    </el-table-column>
+    <el-table-column prop="grade1" label="科研成绩" >
+        <template slot-scope="{row}">{{ row.grade1 }}</template>
+    </el-table-column>
+    <el-table-column prop="grade2" label="骨干服务成绩" >
+        <template slot-scope="{row}">{{ row.grade2 }}</template>
+    </el-table-column>
+    <el-table-column prop="grade3" label="社会实践成绩">
+        <template slot-scope="{row}">{{ row.grade3 }}</template>
+    </el-table-column>
+    <el-table-column prop="grade4" label="志愿服务成绩">
+        <template slot-scope="{row}">{{ row.grade4 }}</template>
+    </el-table-column>
+    <el-table-column prop="grade5" label="学年总结成绩" >
+        <template slot-scope="{row}">{{ row.grade5 }}</template>
+    </el-table-column>
+    <el-table-column prop="sumGrade" label="总成绩">
+        <template slot-scope="{row, index}">{{ gradesum(index) }}</template>
+    </el-table-column>
+</el-table>
+
+  </el-collapse-item>
   <el-collapse-item title="评测信息填报" name="1">
     <el-form ref="form" :model="user" :rules="rules" label-width="200px">
       <el-row>
@@ -118,43 +181,6 @@
   </el-collapse-item>
   
   
-  
-  
-  
-  
-  <el-collapse-item title="学生成绩查看" name="3">
-    <el-table :data="students" style="width: 100%">
-    <el-table-column prop="name" label="姓名" width="10%">
-        <template slot-scope="{row}">{{ row.name }}</template>
-    </el-table-column>
-    <el-table-column prop="id" label="学号" >
-        <template slot-scope="{row}">{{ row.id }}</template>
-    </el-table-column>
-    <el-table-column prop="gpa" label="GPA">
-        <template slot-scope="{row}">{{ row.gpa }}</template>
-    </el-table-column>
-    <el-table-column prop="grade1" label="科研成绩" >
-        <template slot-scope="{row}">{{ row.grade1 }}</template>
-    </el-table-column>
-    <el-table-column prop="grade2" label="骨干服务成绩" >
-        <template slot-scope="{row}">{{ row.grade2 }}</template>
-    </el-table-column>
-    <el-table-column prop="grade3" label="社会实践成绩">
-        <template slot-scope="{row}">{{ row.grade3 }}</template>
-    </el-table-column>
-    <el-table-column prop="grade4" label="志愿服务成绩">
-        <template slot-scope="{row}">{{ row.grade4 }}</template>
-    </el-table-column>
-    <el-table-column prop="grade5" label="学年总结成绩" >
-        <template slot-scope="{row}">{{ row.grade5 }}</template>
-    </el-table-column>
-    <el-table-column prop="sumGrade" label="总成绩">
-        <template slot-scope="{row, index}">{{ gradesum(index) }}</template>
-    </el-table-column>
-</el-table>
-
-  </el-collapse-item>
-
   <el-collapse-item title="反馈" name="5">
         </el-collapse-item>
 </el-collapse>
@@ -172,6 +198,7 @@
 
   <script>
   //import { changeinfo } from '@/api/login'
+  import { getInfo } from '/api/info'
   import { getEvainfo} from '/api/info'
   import { changeEvainfo } from '/api/info'
   import {getBasicinfo} from  '/api/info'
@@ -180,6 +207,19 @@
     name: 'AddUser',
     data() {
       return {
+
+        uu:{
+          name: '',
+          studentNumber: '',
+          academicGrade: '',
+          researchContent: '',
+          studentLeadershipContent: '',
+          socialPracticeContent: '',
+          volunteerServiceContent: '',
+          personalSummaryContent: '',
+
+        }
+,
         user: {
           name: '',
           studentNumber: '',
@@ -239,6 +279,12 @@
     },
     async mounted() {
   // 页面加载时从本地存储中读取用户数据
+        const response0 = await getInfo()
+          if (response0.code==200){
+            this.uu=response0.data            
+            //this.$message.success(response.data.name)
+          }
+
           const response1 = await getEvainfo()
           if (response1.code==200){
             this.user=response1.data
