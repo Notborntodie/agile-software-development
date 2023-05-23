@@ -14,6 +14,9 @@
                       <span slot="title">about</span>
                   </el-menu-item>
                 -->
+
+                
+
                   <el-menu-item index="/rbac/user/list" @click="$router.push('/rbac/user/list')" >
                       <i class="el-icon-menu"></i>
                       <span slot="title">学工管理</span>

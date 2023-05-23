@@ -1,8 +1,6 @@
 <template>
   <div class="container">
     <h1 class="page-title">学生页面</h1>
-
-
     <el-collapse v-model="activeNames">
       <el-collapse-item title="学生评测信息" name="0">
         </el-collapse-item>

@@ -202,8 +202,16 @@ export default {
         if (response.code === 200) {
           //this.$message.success("刷新成功")
           this.backendStudents = response.data
+          for (let index = 0; index < this.backendStudents.length; index++) {
+            this.backendStudents[index].sumGrade=
+            this.backendStudents[index].academicGrade+
+            this.backendStudents[index].researchGrade+
+            this.backendStudents[index].studentLeadershipGrade+
+            this.backendStudents[index].socialPracticeGrade+
+            this.backendStudents[index].volunteerServiceGrade+
+            this.backendStudents[index].personalSummaryGrade
+          }
           this.handleBackendDataChange()
-
         } else {
           this.$message.error('获取数据失败')
         }
@@ -310,10 +318,6 @@ updateBackendPagedData() {
 handleBackendDataChange() {
   this.updateBackendPagedData();
 },
-
-
-
-
 
     }
 ,
