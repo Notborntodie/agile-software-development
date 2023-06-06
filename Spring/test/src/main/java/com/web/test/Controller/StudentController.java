@@ -24,6 +24,60 @@ public class StudentController {
 
     private final Logger logger = LoggerFactory.getLogger(getClass());
 
+
+    @GetMapping("/getInfo")
+    public  CommonResult<StudentEvaluateVO> getInfo(@RequestHeader("Authorization") String authHeader){
+
+
+        // 解析Authorization请求头中的JWT令牌 Bearer access_token
+        String token = authHeader.substring(7);
+        String username = jwtTokenUtil.getUsernameFromToken(token);
+        logger.info(username);
+
+
+        StudentEvaluateVO studentEvaluateVO=new StudentEvaluateVO();
+        Student student= userMapper.findByUsername(username);
+        studentEvaluateVO.setName(student.getName());
+        studentEvaluateVO.setStudentNumber(student.getStudentNumber());
+        GradeSummary gradeSummary=userMapper.findByStudentId(student.getId());
+        studentEvaluateVO.setAcademicGrade(gradeSummary.getAcademicGrade());
+
+
+        PersonalSummary personalSummary=userMapper.psfindBysid(student.getId());
+        Research research=userMapper.rfindBysid(student.getId());
+        SocialPractice socialPractice=userMapper.spfindBysid(student.getId());
+        StudentLeadership studentLeadership=userMapper.slfindBysid(student.getId());
+        VolunteerService  volunteerService=userMapper.vsfindBysid(student.getId());
+
+        if (studentLeadership!=null) {
+            studentEvaluateVO.setStudentLeadershipContent(studentLeadership.getStudentLeadershipContent());
+        }
+
+        if (research!=null){
+            studentEvaluateVO.setResearchContent(research.getResearchContent());
+        }
+
+        if (socialPractice!=null){
+            studentEvaluateVO.setSocialPracticeContent(socialPractice.getSocialPracticeContent());
+        }
+
+        if (personalSummary!=null){
+            studentEvaluateVO.setPersonalSummaryContent(personalSummary.getPersonalSummaryContent());
+        }
+
+        if (volunteerService!=null){
+            studentEvaluateVO.setVolunteerServiceContent(volunteerService.getVolunteerServiceContent());
+        }
+
+
+
+        return  CommonResult.success(studentEvaluateVO);
+
+
+    }
+
+
+
     @GetMapping ("/getBasicinfo")
     public CommonResult<StudentInfoVO> getBasicinfo(@RequestHeader("Authorization") String authHeader) {
 
@@ -87,6 +141,8 @@ public class StudentController {
         studentEvaluateVO.setStudentNumber(student.getStudentNumber());
         GradeSummary gradeSummary=userMapper.findByStudentId(student.getId());
         studentEvaluateVO.setAcademicGrade(gradeSummary.getAcademicGrade());
+
+
         logger.info(studentEvaluateVO.getName());
         return  CommonResult.success(studentEvaluateVO);
     }

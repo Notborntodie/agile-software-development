@@ -1,6 +1,7 @@
 package com.web.test.Controller;
 
 
+import com.web.test.Service.RedisService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,9 +12,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/my-api/demo")
 public class DemoServer {
+    RedisService redisService;
     @ApiOperation("Hello World接口")
     @GetMapping("/hello")
     public String hello() {
-        return "Hello, world!";
+        redisService.setValue("ab","1112");
+        redisService.setValueWithExpiration("abcd","1112",10);
+        redisService.deleteValue("abc");
+        System.out.println(redisService.getValue("ab"));
+        return redisService.getValue("ab");
     }
 }

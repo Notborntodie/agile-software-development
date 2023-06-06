@@ -11,9 +11,9 @@
         UPDATE userDemo SET name=#{name},phone=#{phone},email= #{email} WHERE username = #{username}
     </insert>
 
-    <insert id="changepass" parameterType="com.web.test.VO.Userpass">
-        UPDATE userDemo SET password=#{newpassword} WHERE username = #{username}
-    </insert>
+    <update id="changepass" parameterType="com.web.test.DO.User">
+        UPDATE user SET password=#{password} WHERE username = #{username}
+    </update>
 
     <select id="getUser" resultType="com.web.test.DO.User" >
         SELECT  id ,username,password FROM  user WHERE username=#{username}
@@ -30,6 +30,13 @@
                 #{Email},#{Year}, #{AcademyDictionary}, #{MajorDictionary},
                #{PoliticalStatusDictionary},#{StudentTypeDictionary})
     </select>
+
+    <update id="changeStudent" parameterType="com.web.test.DO.Student">
+        UPDATE student
+        SET Name = #{Name}
+        WHERE UserId = #{UserId}
+    </update>
+
 
 
     <update id="updateStudent" parameterType="com.web.test.DO.Student">
@@ -73,6 +80,17 @@
         VALUES ( #{studentId}, #{socialPracticeGrade}, #{researchGrade}, #{volunteerServiceGrade},
                 #{academicGrade}, #{studentLeadershipGrade}, #{personalSummaryGrade}, #{sumGrade})
     </select>
+
+    <update id="changeGpa" parameterType="com.web.test.DO.GradeSummary">
+            Update  gradesummary
+            SET academicGrade = #{academicGrade}
+        Where  StudentId = #{studentId}
+    </update>
+
+
+
+
+
 
     <select id="getAllGrade" resultType="com.web.test.DO.GradeSummary">
         SELECT ID, StudentId, SocialPracticeGrade, ResearchGrade, VolunteerServiceGrade,
@@ -248,13 +266,6 @@
         SET VolunteerServiceContent = #{VolunteerServiceContent}
         WHERE StudentId = #{studentId};
     </update>
-
-
-
-
-
-
-
 
 
 

@@ -1,9 +1,7 @@
 package com.web.test.Controller;
 
-import com.web.test.DO.GradeSummary;
-import com.web.test.DO.Student;
-import com.web.test.DO.User;
-import com.web.test.DO.UserDemo;
+import com.web.test.DO.*;
+import com.web.test.Mapper.RoleMapper;
 import com.web.test.Mapper.UserMapper;
 import com.web.test.Util.JwtTokenUtil;
 import com.web.test.VO.*;
@@ -23,6 +21,9 @@ public class StulistController {
 
     @Autowired
     private UserMapper userMapper;
+
+    @Autowired
+    private RoleMapper roleMapper;
 
     @Autowired
     private JwtTokenUtil jwtTokenUtil;
@@ -50,6 +51,8 @@ public class StulistController {
                 userMapper.setUser(user);
                 user = userMapper.getUser(studentVO.getId());
 
+                roleMapper.setUserToStu(user.getId());
+
                 Student student = new Student();
                 student.setUserId(user.getId());
                 student.setName(studentVO.getName());
@@ -61,8 +64,18 @@ public class StulistController {
                 gradeSummary.setStudentId(student.getId());
                 gradeSummary.setAcademicGrade(studentVO.getGpa());
                 userMapper.setGradeSummary(gradeSummary);
-            }else {
+            }else{
+                User user = userMapper.getUser(studentVO.getId());
+                Student student = new Student();
+                student.setUserId(user.getId());
+                student.setName(studentVO.getName());
+                userMapper.changeStudent(student);
+                student = userMapper.getStudentByUid(student.getUserId());
 
+                GradeSummary gradeSummary = new GradeSummary();
+                gradeSummary.setStudentId(student.getId());
+                gradeSummary.setAcademicGrade(studentVO.getGpa());
+                userMapper.changeGpa(gradeSummary);
 
             }
 
@@ -75,7 +88,7 @@ public class StulistController {
     }
 
 
-
+    @CrossOrigin       //后端跨域
     @GetMapping("/get")
     public  CommonResult<?> getStulist(){
         GradeSummary[] gradeSummaries=userMapper.getAllGrade();
@@ -104,6 +117,32 @@ public class StulistController {
         }
 
             return CommonResult.success(evaluateData);
+    }
+
+
+    @CrossOrigin       //后端跨域
+    @PostMapping("/sumbitrev")
+    public  CommonResult<?>  sumbitrev(@RequestBody ReviewerVO[] reviewerVOS){
+        for (ReviewerVO reviewerVO: reviewerVOS) {
+            if (userMapper.getUser(reviewerVO.getId())==null){
+                User user=new User();
+                user.setUsername(reviewerVO.getId());
+                user.setPassword(reviewerVO.getId());
+                userMapper.setUser(user);
+                user = userMapper.getUser(reviewerVO.getId());
+                UserRole userRole=new UserRole();
+                userRole.setUser_id(user.getId());
+                for (int i=0;i<reviewerVO.getLevel().length;i++) {
+                    userRole.setRole_id(reviewerVO.getLevel()[i]);
+                    roleMapper.setUserToRev(userRole);
+                }
+
+            }
+        }
+
+
+        return CommonResult.success("ok");
+
     }
 
 

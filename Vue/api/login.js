@@ -13,6 +13,32 @@ export function login(username, password) {
   })
 }
 
+export function  getMenu(){
+  return  request({
+    url :'/auth/menu',
+    method : 'get',
+  })
+}
+
+
+
+// 修改密码
+export function changepass(oldpassword,newpassword){
+  const data={
+    oldpassword,
+    newpassword
+  }
+  return request({
+    url: '/auth/changepass',
+    method: 'post',
+    data: data
+  })
+}
+
+
+
+
+
 
 // 用户注册
 export function register(name, idCard, password, phone, email) {
@@ -59,18 +85,4 @@ export function changeinfo(username, name, phone, email){
 }
 
 
-
-// 修改密码
-export function changepass(username,oldpassword,newpassword){
-  const data={
-    username,
-    oldpassword,
-    newpassword
-  }
-  return request({
-    url: 'user/profile/changepass',
-    method: 'post',
-    data: data
-  })
-}
 

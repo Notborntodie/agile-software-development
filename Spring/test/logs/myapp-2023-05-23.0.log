@@ -1,0 +1,1371 @@
+2023-05-23 00:09:09 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=26m49s587ms).
+2023-05-23 00:31:53 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=22m43s406ms).
+2023-05-23 00:38:28 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m5s263ms).
+2023-05-23 00:41:48 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m19s689ms).
+2023-05-23 00:51:18 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s797ms), soft-evicting connections from pool.
+2023-05-23 00:52:34 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m16s26ms).
+2023-05-23 00:54:02 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=57s982ms).
+2023-05-23 00:57:38 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m6s144ms).
+2023-05-23 01:24:18 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=26m10s421ms).
+2023-05-23 01:35:25 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11m6s960ms).
+2023-05-23 01:55:54 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=20m29s421ms).
+2023-05-23 02:03:11 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m16s134ms).
+2023-05-23 04:04:06 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h25s495ms).
+2023-05-23 04:24:49 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=20m42s698ms).
+2023-05-23 06:25:35 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h16s275ms).
+2023-05-23 08:27:32 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h27s181ms).
+2023-05-23 09:08:06 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=39m33s944ms).
+2023-05-23 11:08:36 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h29s210ms).
+2023-05-23 11:55:10 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=45m34s323ms).
+2023-05-23 12:02:54 [http-nio-28080-exec-7] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is io.jsonwebtoken.ExpiredJwtException: JWT expired at 2023-05-22T20:49:09Z. Current time: 2023-05-23T12:02:54Z, a difference of 54825069 milliseconds.  Allowed clock skew: 0 milliseconds.] with root cause
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2023-05-22T20:49:09Z. Current time: 2023-05-23T12:02:54Z, a difference of 54825069 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at com.web.test.Util.JwtTokenUtil.getAllClaimsFromToken(JwtTokenUtil.java:61)
+	at com.web.test.Util.JwtTokenUtil.getClaimFromToken(JwtTokenUtil.java:56)
+	at com.web.test.Util.JwtTokenUtil.getUsernameFromToken(JwtTokenUtil.java:48)
+	at com.web.test.Controller.StudentController.getEvainfo(StudentController.java:83)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:502)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:596)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+2023-05-23 12:03:35 [http-nio-28080-exec-8] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is io.jsonwebtoken.ExpiredJwtException: JWT expired at 2023-05-22T20:49:09Z. Current time: 2023-05-23T12:03:35Z, a difference of 54866630 milliseconds.  Allowed clock skew: 0 milliseconds.] with root cause
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2023-05-22T20:49:09Z. Current time: 2023-05-23T12:03:35Z, a difference of 54866630 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at com.web.test.Util.JwtTokenUtil.getAllClaimsFromToken(JwtTokenUtil.java:61)
+	at com.web.test.Util.JwtTokenUtil.getClaimFromToken(JwtTokenUtil.java:56)
+	at com.web.test.Util.JwtTokenUtil.getUsernameFromToken(JwtTokenUtil.java:48)
+	at com.web.test.Controller.StudentController.getEvainfo(StudentController.java:83)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:502)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:596)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+2023-05-23 12:03:39 [http-nio-28080-exec-9] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is io.jsonwebtoken.ExpiredJwtException: JWT expired at 2023-05-22T20:49:09Z. Current time: 2023-05-23T12:03:39Z, a difference of 54870786 milliseconds.  Allowed clock skew: 0 milliseconds.] with root cause
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2023-05-22T20:49:09Z. Current time: 2023-05-23T12:03:39Z, a difference of 54870786 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at com.web.test.Util.JwtTokenUtil.getAllClaimsFromToken(JwtTokenUtil.java:61)
+	at com.web.test.Util.JwtTokenUtil.getClaimFromToken(JwtTokenUtil.java:56)
+	at com.web.test.Util.JwtTokenUtil.getUsernameFromToken(JwtTokenUtil.java:48)
+	at com.web.test.Controller.StudentController.getEvainfo(StudentController.java:83)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:502)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:596)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+2023-05-23 12:03:48 [http-nio-28080-exec-1] INFO  c.web.test.Controller.AuthController - 2201
+2023-05-23 12:03:48 [http-nio-28080-exec-4] INFO  c.web.test.Controller.AuthController - 2201
+2023-05-23 12:03:48 [http-nio-28080-exec-1] INFO  c.web.test.Controller.AuthController - 2201
+2023-05-23 12:03:48 [http-nio-28080-exec-4] INFO  c.web.test.Controller.AuthController - 2201
+2023-05-23 12:03:48 [http-nio-28080-exec-4] INFO  c.web.test.Controller.AuthController - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMjAxIiwiZXhwIjoxNjg0ODE4MjI4LCJpYXQiOjE2ODQ4MTQ2Mjh9.CEZP5yeiKTHZVqRWd6FcjlMXVW97WCNLBycYALvJ5qk
+2023-05-23 12:03:48 [http-nio-28080-exec-1] INFO  c.web.test.Controller.AuthController - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMjAxIiwiZXhwIjoxNjg0ODE4MjI4LCJpYXQiOjE2ODQ4MTQ2Mjh9.CEZP5yeiKTHZVqRWd6FcjlMXVW97WCNLBycYALvJ5qk
+2023-05-23 12:03:48 [http-nio-28080-exec-3] WARN  o.s.web.servlet.PageNotFound - No mapping for OPTIONS /admin-api/user/profile/get
+2023-05-23 12:03:49 [http-nio-28080-exec-5] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 12:03:49 [http-nio-28080-exec-5] INFO  c.w.t.Controller.StudentController - 张三
+2023-05-23 12:03:49 [http-nio-28080-exec-6] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 12:04:12 [http-nio-28080-exec-7] WARN  o.s.web.servlet.PageNotFound - No mapping for OPTIONS /admin-api/user/profile/get
+2023-05-23 12:15:37 [http-nio-28080-exec-6] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 12:15:37 [http-nio-28080-exec-6] INFO  c.w.t.Controller.StudentController - 张三
+2023-05-23 12:15:37 [http-nio-28080-exec-7] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 12:15:39 [http-nio-28080-exec-8] WARN  o.s.web.servlet.PageNotFound - No mapping for OPTIONS /admin-api/user/profile/get
+2023-05-23 12:15:40 [http-nio-28080-exec-9] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 12:15:40 [http-nio-28080-exec-9] INFO  c.w.t.Controller.StudentController - 张三
+2023-05-23 12:15:40 [http-nio-28080-exec-10] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 12:20:36 [http-nio-28080-exec-1] WARN  o.s.web.servlet.PageNotFound - No mapping for OPTIONS /admin-api/user/profile/get
+2023-05-23 12:20:55 [http-nio-28080-exec-4] INFO  c.web.test.Controller.AuthController - 222
+2023-05-23 12:20:55 [http-nio-28080-exec-4] INFO  c.web.test.Controller.AuthController - 222
+2023-05-23 12:20:55 [http-nio-28080-exec-4] INFO  c.web.test.Controller.AuthController - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMjIiLCJleHAiOjE2ODQ4MTkyNTUsImlhdCI6MTY4NDgxNTY1NX0.EQj_oYJfUkhwJIkPnDgI3VmwqKkL2AWVGgGsXYbHcIY
+2023-05-23 12:20:55 [http-nio-28080-exec-3] INFO  c.web.test.Controller.AuthController - 222
+2023-05-23 12:20:55 [http-nio-28080-exec-3] INFO  c.web.test.Controller.AuthController - 222
+2023-05-23 12:20:55 [http-nio-28080-exec-3] INFO  c.web.test.Controller.AuthController - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMjIiLCJleHAiOjE2ODQ4MTkyNTUsImlhdCI6MTY4NDgxNTY1NX0.EQj_oYJfUkhwJIkPnDgI3VmwqKkL2AWVGgGsXYbHcIY
+2023-05-23 12:20:55 [http-nio-28080-exec-5] WARN  o.s.web.servlet.PageNotFound - No mapping for OPTIONS /admin-api/user/profile/get
+2023-05-23 12:22:13 [http-nio-28080-exec-9] WARN  o.s.web.servlet.PageNotFound - No mapping for OPTIONS /admin-api/user/profile/get
+2023-05-23 13:09:59 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m18s982ms).
+2023-05-23 14:20:17 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m47s704ms).
+2023-05-23 14:43:46 [http-nio-28080-exec-4] WARN  o.s.web.servlet.PageNotFound - No mapping for OPTIONS /admin-api/user/profile/get
+2023-05-23 14:43:52 [http-nio-28080-exec-7] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is io.jsonwebtoken.ExpiredJwtException: JWT expired at 2023-05-23T13:20:55Z. Current time: 2023-05-23T14:43:52Z, a difference of 4977496 milliseconds.  Allowed clock skew: 0 milliseconds.] with root cause
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2023-05-23T13:20:55Z. Current time: 2023-05-23T14:43:52Z, a difference of 4977496 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at com.web.test.Util.JwtTokenUtil.getAllClaimsFromToken(JwtTokenUtil.java:61)
+	at com.web.test.Util.JwtTokenUtil.getClaimFromToken(JwtTokenUtil.java:56)
+	at com.web.test.Util.JwtTokenUtil.getUsernameFromToken(JwtTokenUtil.java:48)
+	at com.web.test.Controller.StudentController.getEvainfo(StudentController.java:83)
+	at sun.reflect.GeneratedMethodAccessor54.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:502)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:596)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+2023-05-23 14:46:50 [http-nio-28080-exec-10] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is io.jsonwebtoken.ExpiredJwtException: JWT expired at 2023-05-23T13:20:55Z. Current time: 2023-05-23T14:46:50Z, a difference of 5155525 milliseconds.  Allowed clock skew: 0 milliseconds.] with root cause
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2023-05-23T13:20:55Z. Current time: 2023-05-23T14:46:50Z, a difference of 5155525 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at com.web.test.Util.JwtTokenUtil.getAllClaimsFromToken(JwtTokenUtil.java:61)
+	at com.web.test.Util.JwtTokenUtil.getClaimFromToken(JwtTokenUtil.java:56)
+	at com.web.test.Util.JwtTokenUtil.getUsernameFromToken(JwtTokenUtil.java:48)
+	at com.web.test.Controller.StudentController.getEvainfo(StudentController.java:83)
+	at sun.reflect.GeneratedMethodAccessor54.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:502)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:596)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+2023-05-23 14:46:54 [http-nio-28080-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is io.jsonwebtoken.ExpiredJwtException: JWT expired at 2023-05-23T13:20:55Z. Current time: 2023-05-23T14:46:54Z, a difference of 5159462 milliseconds.  Allowed clock skew: 0 milliseconds.] with root cause
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2023-05-23T13:20:55Z. Current time: 2023-05-23T14:46:54Z, a difference of 5159462 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at com.web.test.Util.JwtTokenUtil.getAllClaimsFromToken(JwtTokenUtil.java:61)
+	at com.web.test.Util.JwtTokenUtil.getClaimFromToken(JwtTokenUtil.java:56)
+	at com.web.test.Util.JwtTokenUtil.getUsernameFromToken(JwtTokenUtil.java:48)
+	at com.web.test.Controller.StudentController.getEvainfo(StudentController.java:83)
+	at sun.reflect.GeneratedMethodAccessor54.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:502)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:596)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+2023-05-23 14:47:27 [http-nio-28080-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is io.jsonwebtoken.ExpiredJwtException: JWT expired at 2023-05-23T13:20:55Z. Current time: 2023-05-23T14:47:27Z, a difference of 5192363 milliseconds.  Allowed clock skew: 0 milliseconds.] with root cause
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2023-05-23T13:20:55Z. Current time: 2023-05-23T14:47:27Z, a difference of 5192363 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at com.web.test.Util.JwtTokenUtil.getAllClaimsFromToken(JwtTokenUtil.java:61)
+	at com.web.test.Util.JwtTokenUtil.getClaimFromToken(JwtTokenUtil.java:56)
+	at com.web.test.Util.JwtTokenUtil.getUsernameFromToken(JwtTokenUtil.java:48)
+	at com.web.test.Controller.StudentController.getEvainfo(StudentController.java:83)
+	at sun.reflect.GeneratedMethodAccessor54.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:502)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:596)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+2023-05-23 14:50:18 [http-nio-28080-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is io.jsonwebtoken.ExpiredJwtException: JWT expired at 2023-05-23T13:20:55Z. Current time: 2023-05-23T14:50:18Z, a difference of 5363400 milliseconds.  Allowed clock skew: 0 milliseconds.] with root cause
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2023-05-23T13:20:55Z. Current time: 2023-05-23T14:50:18Z, a difference of 5363400 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at com.web.test.Util.JwtTokenUtil.getAllClaimsFromToken(JwtTokenUtil.java:61)
+	at com.web.test.Util.JwtTokenUtil.getClaimFromToken(JwtTokenUtil.java:56)
+	at com.web.test.Util.JwtTokenUtil.getUsernameFromToken(JwtTokenUtil.java:48)
+	at com.web.test.Controller.StudentController.getEvainfo(StudentController.java:83)
+	at sun.reflect.GeneratedMethodAccessor54.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:502)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:596)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+2023-05-23 14:50:22 [http-nio-28080-exec-3] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is io.jsonwebtoken.ExpiredJwtException: JWT expired at 2023-05-23T13:20:55Z. Current time: 2023-05-23T14:50:22Z, a difference of 5367025 milliseconds.  Allowed clock skew: 0 milliseconds.] with root cause
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2023-05-23T13:20:55Z. Current time: 2023-05-23T14:50:22Z, a difference of 5367025 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at com.web.test.Util.JwtTokenUtil.getAllClaimsFromToken(JwtTokenUtil.java:61)
+	at com.web.test.Util.JwtTokenUtil.getClaimFromToken(JwtTokenUtil.java:56)
+	at com.web.test.Util.JwtTokenUtil.getUsernameFromToken(JwtTokenUtil.java:48)
+	at com.web.test.Controller.StudentController.getEvainfo(StudentController.java:83)
+	at sun.reflect.GeneratedMethodAccessor54.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:502)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:596)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+2023-05-23 14:50:30 [http-nio-28080-exec-5] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is io.jsonwebtoken.ExpiredJwtException: JWT expired at 2023-05-23T13:20:55Z. Current time: 2023-05-23T14:50:30Z, a difference of 5375893 milliseconds.  Allowed clock skew: 0 milliseconds.] with root cause
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2023-05-23T13:20:55Z. Current time: 2023-05-23T14:50:30Z, a difference of 5375893 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at com.web.test.Util.JwtTokenUtil.getAllClaimsFromToken(JwtTokenUtil.java:61)
+	at com.web.test.Util.JwtTokenUtil.getClaimFromToken(JwtTokenUtil.java:56)
+	at com.web.test.Util.JwtTokenUtil.getUsernameFromToken(JwtTokenUtil.java:48)
+	at com.web.test.Controller.StudentController.getEvainfo(StudentController.java:83)
+	at sun.reflect.GeneratedMethodAccessor54.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:502)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:596)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+2023-05-23 14:50:37 [http-nio-28080-exec-6] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is io.jsonwebtoken.ExpiredJwtException: JWT expired at 2023-05-23T13:20:55Z. Current time: 2023-05-23T14:50:37Z, a difference of 5382306 milliseconds.  Allowed clock skew: 0 milliseconds.] with root cause
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2023-05-23T13:20:55Z. Current time: 2023-05-23T14:50:37Z, a difference of 5382306 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at com.web.test.Util.JwtTokenUtil.getAllClaimsFromToken(JwtTokenUtil.java:61)
+	at com.web.test.Util.JwtTokenUtil.getClaimFromToken(JwtTokenUtil.java:56)
+	at com.web.test.Util.JwtTokenUtil.getUsernameFromToken(JwtTokenUtil.java:48)
+	at com.web.test.Controller.StudentController.getEvainfo(StudentController.java:83)
+	at sun.reflect.GeneratedMethodAccessor54.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:502)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:596)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+2023-05-23 14:50:45 [http-nio-28080-exec-7] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is io.jsonwebtoken.ExpiredJwtException: JWT expired at 2023-05-23T13:20:55Z. Current time: 2023-05-23T14:50:45Z, a difference of 5390679 milliseconds.  Allowed clock skew: 0 milliseconds.] with root cause
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2023-05-23T13:20:55Z. Current time: 2023-05-23T14:50:45Z, a difference of 5390679 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at com.web.test.Util.JwtTokenUtil.getAllClaimsFromToken(JwtTokenUtil.java:61)
+	at com.web.test.Util.JwtTokenUtil.getClaimFromToken(JwtTokenUtil.java:56)
+	at com.web.test.Util.JwtTokenUtil.getUsernameFromToken(JwtTokenUtil.java:48)
+	at com.web.test.Controller.StudentController.getEvainfo(StudentController.java:83)
+	at sun.reflect.GeneratedMethodAccessor54.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:502)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:596)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+2023-05-23 14:50:55 [http-nio-28080-exec-8] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is io.jsonwebtoken.ExpiredJwtException: JWT expired at 2023-05-23T13:20:55Z. Current time: 2023-05-23T14:50:55Z, a difference of 5400036 milliseconds.  Allowed clock skew: 0 milliseconds.] with root cause
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2023-05-23T13:20:55Z. Current time: 2023-05-23T14:50:55Z, a difference of 5400036 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at com.web.test.Util.JwtTokenUtil.getAllClaimsFromToken(JwtTokenUtil.java:61)
+	at com.web.test.Util.JwtTokenUtil.getClaimFromToken(JwtTokenUtil.java:56)
+	at com.web.test.Util.JwtTokenUtil.getUsernameFromToken(JwtTokenUtil.java:48)
+	at com.web.test.Controller.StudentController.getEvainfo(StudentController.java:83)
+	at sun.reflect.GeneratedMethodAccessor54.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:502)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:596)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+2023-05-23 14:51:00 [http-nio-28080-exec-9] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is io.jsonwebtoken.ExpiredJwtException: JWT expired at 2023-05-23T13:20:55Z. Current time: 2023-05-23T14:51:00Z, a difference of 5405903 milliseconds.  Allowed clock skew: 0 milliseconds.] with root cause
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2023-05-23T13:20:55Z. Current time: 2023-05-23T14:51:00Z, a difference of 5405903 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at com.web.test.Util.JwtTokenUtil.getAllClaimsFromToken(JwtTokenUtil.java:61)
+	at com.web.test.Util.JwtTokenUtil.getClaimFromToken(JwtTokenUtil.java:56)
+	at com.web.test.Util.JwtTokenUtil.getUsernameFromToken(JwtTokenUtil.java:48)
+	at com.web.test.Controller.StudentController.getEvainfo(StudentController.java:83)
+	at sun.reflect.GeneratedMethodAccessor54.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:502)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:596)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+2023-05-23 14:51:34 [http-nio-28080-exec-10] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is io.jsonwebtoken.ExpiredJwtException: JWT expired at 2023-05-23T13:20:55Z. Current time: 2023-05-23T14:51:34Z, a difference of 5439124 milliseconds.  Allowed clock skew: 0 milliseconds.] with root cause
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2023-05-23T13:20:55Z. Current time: 2023-05-23T14:51:34Z, a difference of 5439124 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at com.web.test.Util.JwtTokenUtil.getAllClaimsFromToken(JwtTokenUtil.java:61)
+	at com.web.test.Util.JwtTokenUtil.getClaimFromToken(JwtTokenUtil.java:56)
+	at com.web.test.Util.JwtTokenUtil.getUsernameFromToken(JwtTokenUtil.java:48)
+	at com.web.test.Controller.StudentController.getEvainfo(StudentController.java:83)
+	at sun.reflect.GeneratedMethodAccessor54.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:502)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:596)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+2023-05-23 14:51:34 [http-nio-28080-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is io.jsonwebtoken.ExpiredJwtException: JWT expired at 2023-05-23T13:20:55Z. Current time: 2023-05-23T14:51:34Z, a difference of 5439316 milliseconds.  Allowed clock skew: 0 milliseconds.] with root cause
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2023-05-23T13:20:55Z. Current time: 2023-05-23T14:51:34Z, a difference of 5439316 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at com.web.test.Util.JwtTokenUtil.getAllClaimsFromToken(JwtTokenUtil.java:61)
+	at com.web.test.Util.JwtTokenUtil.getClaimFromToken(JwtTokenUtil.java:56)
+	at com.web.test.Util.JwtTokenUtil.getUsernameFromToken(JwtTokenUtil.java:48)
+	at com.web.test.Controller.StudentController.getEvainfo(StudentController.java:83)
+	at sun.reflect.GeneratedMethodAccessor54.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:502)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:596)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+2023-05-23 14:51:49 [http-nio-28080-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is io.jsonwebtoken.ExpiredJwtException: JWT expired at 2023-05-23T13:20:55Z. Current time: 2023-05-23T14:51:49Z, a difference of 5454127 milliseconds.  Allowed clock skew: 0 milliseconds.] with root cause
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2023-05-23T13:20:55Z. Current time: 2023-05-23T14:51:49Z, a difference of 5454127 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at com.web.test.Util.JwtTokenUtil.getAllClaimsFromToken(JwtTokenUtil.java:61)
+	at com.web.test.Util.JwtTokenUtil.getClaimFromToken(JwtTokenUtil.java:56)
+	at com.web.test.Util.JwtTokenUtil.getUsernameFromToken(JwtTokenUtil.java:48)
+	at com.web.test.Controller.StudentController.getEvainfo(StudentController.java:83)
+	at sun.reflect.GeneratedMethodAccessor54.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:502)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:596)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+2023-05-23 14:52:32 [http-nio-28080-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is io.jsonwebtoken.ExpiredJwtException: JWT expired at 2023-05-23T13:20:55Z. Current time: 2023-05-23T14:52:32Z, a difference of 5497898 milliseconds.  Allowed clock skew: 0 milliseconds.] with root cause
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2023-05-23T13:20:55Z. Current time: 2023-05-23T14:52:32Z, a difference of 5497898 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at com.web.test.Util.JwtTokenUtil.getAllClaimsFromToken(JwtTokenUtil.java:61)
+	at com.web.test.Util.JwtTokenUtil.getClaimFromToken(JwtTokenUtil.java:56)
+	at com.web.test.Util.JwtTokenUtil.getUsernameFromToken(JwtTokenUtil.java:48)
+	at com.web.test.Controller.StudentController.getEvainfo(StudentController.java:83)
+	at sun.reflect.GeneratedMethodAccessor54.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:502)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:596)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+2023-05-23 14:52:36 [http-nio-28080-exec-3] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is io.jsonwebtoken.ExpiredJwtException: JWT expired at 2023-05-23T13:20:55Z. Current time: 2023-05-23T14:52:36Z, a difference of 5501676 milliseconds.  Allowed clock skew: 0 milliseconds.] with root cause
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2023-05-23T13:20:55Z. Current time: 2023-05-23T14:52:36Z, a difference of 5501676 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at com.web.test.Util.JwtTokenUtil.getAllClaimsFromToken(JwtTokenUtil.java:61)
+	at com.web.test.Util.JwtTokenUtil.getClaimFromToken(JwtTokenUtil.java:56)
+	at com.web.test.Util.JwtTokenUtil.getUsernameFromToken(JwtTokenUtil.java:48)
+	at com.web.test.Controller.StudentController.getEvainfo(StudentController.java:83)
+	at sun.reflect.GeneratedMethodAccessor54.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:502)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:596)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+2023-05-23 14:52:42 [http-nio-28080-exec-5] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is io.jsonwebtoken.ExpiredJwtException: JWT expired at 2023-05-23T13:20:55Z. Current time: 2023-05-23T14:52:42Z, a difference of 5507029 milliseconds.  Allowed clock skew: 0 milliseconds.] with root cause
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2023-05-23T13:20:55Z. Current time: 2023-05-23T14:52:42Z, a difference of 5507029 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at com.web.test.Util.JwtTokenUtil.getAllClaimsFromToken(JwtTokenUtil.java:61)
+	at com.web.test.Util.JwtTokenUtil.getClaimFromToken(JwtTokenUtil.java:56)
+	at com.web.test.Util.JwtTokenUtil.getUsernameFromToken(JwtTokenUtil.java:48)
+	at com.web.test.Controller.StudentController.getEvainfo(StudentController.java:83)
+	at sun.reflect.GeneratedMethodAccessor54.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:502)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:596)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+2023-05-23 14:52:59 [http-nio-28080-exec-8] INFO  c.web.test.Controller.AuthController - 2201
+2023-05-23 14:52:59 [http-nio-28080-exec-7] INFO  c.web.test.Controller.AuthController - 2201
+2023-05-23 14:52:59 [http-nio-28080-exec-8] INFO  c.web.test.Controller.AuthController - 2201
+2023-05-23 14:52:59 [http-nio-28080-exec-7] INFO  c.web.test.Controller.AuthController - 2201
+2023-05-23 14:52:59 [http-nio-28080-exec-7] INFO  c.web.test.Controller.AuthController - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMjAxIiwiZXhwIjoxNjg0ODI4Mzc5LCJpYXQiOjE2ODQ4MjQ3Nzl9.-ZCkydSsrHlUGmrovojmYk3CMw9IfixmXLpzDmzNvEo
+2023-05-23 14:52:59 [http-nio-28080-exec-8] INFO  c.web.test.Controller.AuthController - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMjAxIiwiZXhwIjoxNjg0ODI4Mzc5LCJpYXQiOjE2ODQ4MjQ3Nzl9.-ZCkydSsrHlUGmrovojmYk3CMw9IfixmXLpzDmzNvEo
+2023-05-23 14:52:59 [http-nio-28080-exec-9] WARN  o.s.web.servlet.PageNotFound - No mapping for OPTIONS /admin-api/user/profile/get
+2023-05-23 14:53:04 [http-nio-28080-exec-10] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 14:53:04 [http-nio-28080-exec-10] INFO  c.w.t.Controller.StudentController - 张三
+2023-05-23 14:53:04 [http-nio-28080-exec-1] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 14:55:35 [http-nio-28080-exec-6] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 14:55:37 [http-nio-28080-exec-7] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 14:55:37 [http-nio-28080-exec-7] INFO  c.w.t.Controller.StudentController - 张三
+2023-05-23 14:55:37 [http-nio-28080-exec-8] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 14:55:42 [http-nio-28080-exec-9] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 14:55:42 [http-nio-28080-exec-9] INFO  c.w.t.Controller.StudentController - 张三
+2023-05-23 14:55:42 [http-nio-28080-exec-10] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 14:56:37 [http-nio-28080-exec-2] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 14:56:37 [http-nio-28080-exec-2] INFO  c.w.t.Controller.StudentController - 张三
+2023-05-23 14:56:37 [http-nio-28080-exec-1] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 14:56:38 [http-nio-28080-exec-4] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 14:56:38 [http-nio-28080-exec-4] INFO  c.w.t.Controller.StudentController - 张三
+2023-05-23 14:56:38 [http-nio-28080-exec-3] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 14:56:40 [http-nio-28080-exec-5] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 14:56:40 [http-nio-28080-exec-5] INFO  c.w.t.Controller.StudentController - 张三
+2023-05-23 14:56:40 [http-nio-28080-exec-6] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 14:57:11 [http-nio-28080-exec-7] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 14:57:11 [http-nio-28080-exec-7] INFO  c.w.t.Controller.StudentController - 张三
+2023-05-23 14:57:11 [http-nio-28080-exec-8] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 14:57:21 [http-nio-28080-exec-9] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 14:57:21 [http-nio-28080-exec-9] INFO  c.w.t.Controller.StudentController - 张三
+2023-05-23 14:57:21 [http-nio-28080-exec-10] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 14:57:23 [http-nio-28080-exec-2] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 14:57:23 [http-nio-28080-exec-2] INFO  c.w.t.Controller.StudentController - 张三
+2023-05-23 14:57:23 [http-nio-28080-exec-1] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 14:57:27 [http-nio-28080-exec-4] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 14:57:27 [http-nio-28080-exec-4] INFO  c.w.t.Controller.StudentController - 张三
+2023-05-23 14:57:27 [http-nio-28080-exec-3] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 14:59:04 [http-nio-28080-exec-6] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 14:59:04 [http-nio-28080-exec-6] INFO  c.w.t.Controller.StudentController - 张三
+2023-05-23 14:59:04 [http-nio-28080-exec-7] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 14:59:10 [http-nio-28080-exec-8] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 14:59:10 [http-nio-28080-exec-8] INFO  c.w.t.Controller.StudentController - 张三
+2023-05-23 14:59:10 [http-nio-28080-exec-9] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 14:59:16 [http-nio-28080-exec-10] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 14:59:16 [http-nio-28080-exec-10] INFO  c.w.t.Controller.StudentController - 张三
+2023-05-23 14:59:16 [http-nio-28080-exec-2] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 14:59:19 [http-nio-28080-exec-1] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 14:59:19 [http-nio-28080-exec-1] INFO  c.w.t.Controller.StudentController - 张三
+2023-05-23 14:59:19 [http-nio-28080-exec-4] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 14:59:33 [http-nio-28080-exec-3] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 14:59:33 [http-nio-28080-exec-3] INFO  c.w.t.Controller.StudentController - 张三
+2023-05-23 14:59:33 [http-nio-28080-exec-5] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 14:59:35 [http-nio-28080-exec-6] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 14:59:35 [http-nio-28080-exec-6] INFO  c.w.t.Controller.StudentController - 张三
+2023-05-23 14:59:35 [http-nio-28080-exec-7] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 15:11:46 [http-nio-28080-exec-9] WARN  o.s.web.servlet.PageNotFound - No mapping for OPTIONS /admin-api/student/getInfo
+2023-05-23 15:49:42 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-05-23 15:49:42 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-05-23 15:49:53 [restartedMain] INFO  com.web.test.TestApplication - Starting TestApplication using Java 1.8.0_362 on zhengyanchendeMacBook-Pro.local with PID 86111 (/Users/zhengyanchen/Desktop/spring/test/target/classes started by zhengyanchen in /Users/zhengyanchen/Desktop/spring/test)
+2023-05-23 15:49:53 [restartedMain] INFO  com.web.test.TestApplication - No active profile set, falling back to 1 default profile: "default"
+2023-05-23 15:49:54 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-05-23 15:49:54 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-05-23 15:49:55 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-05-23 15:49:55 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-05-23 15:49:55 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+2023-05-23 15:49:55 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 28080 (http)
+2023-05-23 15:49:55 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-05-23 15:49:55 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-05-23 15:49:56 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-05-23 15:49:56 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1941 ms
+2023-05-23 15:49:56 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redisConfig': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'spring.redis.password' in value "${spring.redis.password}"
+2023-05-23 15:49:56 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2023-05-23 15:49:56 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-05-23 15:49:56 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redisConfig': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'spring.redis.password' in value "${spring.redis.password}"
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:405)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.web.test.TestApplication.main(TestApplication.java:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'spring.redis.password' in value "${spring.redis.password}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126)
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239)
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:191)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:936)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1332)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	... 22 common frames omitted
+2023-05-23 16:10:31 [restartedMain] INFO  com.web.test.TestApplication - Starting TestApplication using Java 1.8.0_362 on zhengyanchendeMacBook-Pro.local with PID 99750 (/Users/zhengyanchen/Desktop/spring/test/target/classes started by zhengyanchen in /Users/zhengyanchen/Desktop/spring/test)
+2023-05-23 16:10:31 [restartedMain] INFO  com.web.test.TestApplication - No active profile set, falling back to 1 default profile: "default"
+2023-05-23 16:10:32 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-05-23 16:10:32 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-05-23 16:10:33 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-05-23 16:10:33 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-05-23 16:10:33 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+2023-05-23 16:10:33 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 28080 (http)
+2023-05-23 16:10:33 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-05-23 16:10:33 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-05-23 16:10:33 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-05-23 16:10:33 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1973 ms
+2023-05-23 16:10:35 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-05-23 16:10:35 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 28080 (http) with context path ''
+2023-05-23 16:10:35 [restartedMain] INFO  com.web.test.TestApplication - Started TestApplication in 4.902 seconds (JVM running for 6.005)
+2023-05-23 16:12:46 [http-nio-28080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-23 16:12:46 [http-nio-28080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-05-23 16:12:46 [http-nio-28080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2023-05-23 16:12:46 [http-nio-28080-exec-1] WARN  o.s.web.servlet.PageNotFound - No mapping for OPTIONS /admin-api/student/getInfo
+2023-05-23 16:12:57 [http-nio-28080-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-05-23 16:12:58 [http-nio-28080-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-05-23 16:12:58 [http-nio-28080-exec-4] INFO  c.web.test.Controller.AuthController - 2201
+2023-05-23 16:12:58 [http-nio-28080-exec-3] INFO  c.web.test.Controller.AuthController - 2201
+2023-05-23 16:12:58 [http-nio-28080-exec-4] INFO  c.web.test.Controller.AuthController - 2201
+2023-05-23 16:12:58 [http-nio-28080-exec-3] INFO  c.web.test.Controller.AuthController - 2201
+2023-05-23 16:12:58 [http-nio-28080-exec-3] INFO  c.web.test.Controller.AuthController - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMjAxIiwiZXhwIjoxNjg0ODMzMTc4LCJpYXQiOjE2ODQ4Mjk1Nzh9.kNaA1l4r_q727TkXUOfru50-kVePC7S1ip2v8w3CG9Y
+2023-05-23 16:12:58 [http-nio-28080-exec-4] INFO  c.web.test.Controller.AuthController - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMjAxIiwiZXhwIjoxNjg0ODMzMTc4LCJpYXQiOjE2ODQ4Mjk1Nzh9.kNaA1l4r_q727TkXUOfru50-kVePC7S1ip2v8w3CG9Y
+2023-05-23 16:12:58 [http-nio-28080-exec-5] WARN  o.s.web.servlet.PageNotFound - No mapping for OPTIONS /admin-api/user/profile/get
+2023-05-23 16:13:04 [http-nio-28080-exec-6] WARN  o.s.web.servlet.PageNotFound - No mapping for OPTIONS /admin-api/student/getInfo
+2023-05-23 16:14:27 [http-nio-28080-exec-6] WARN  o.s.web.servlet.PageNotFound - No mapping for OPTIONS /admin-api/student/getInfo
+2023-05-23 16:14:30 [http-nio-28080-exec-7] WARN  o.s.web.servlet.PageNotFound - No mapping for OPTIONS /admin-api/student/getInfo
+2023-05-23 16:14:59 [http-nio-28080-exec-3] WARN  o.s.web.servlet.PageNotFound - No mapping for OPTIONS /admin-api/student/getInfo
+2023-05-23 16:16:02 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-05-23 16:16:02 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-05-23 16:16:06 [restartedMain] INFO  com.web.test.TestApplication - Starting TestApplication using Java 1.8.0_362 on zhengyanchendeMacBook-Pro.local with PID 3900 (/Users/zhengyanchen/Desktop/spring/test/target/classes started by zhengyanchen in /Users/zhengyanchen/Desktop/spring/test)
+2023-05-23 16:16:06 [restartedMain] INFO  com.web.test.TestApplication - No active profile set, falling back to 1 default profile: "default"
+2023-05-23 16:16:06 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-05-23 16:16:06 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-05-23 16:16:07 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-05-23 16:16:07 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-05-23 16:16:07 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+2023-05-23 16:16:07 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 28080 (http)
+2023-05-23 16:16:07 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-05-23 16:16:07 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-05-23 16:16:08 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-05-23 16:16:08 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1776 ms
+2023-05-23 16:16:09 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-05-23 16:16:09 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 28080 (http) with context path ''
+2023-05-23 16:16:09 [restartedMain] INFO  com.web.test.TestApplication - Started TestApplication in 4.241 seconds (JVM running for 5.266)
+2023-05-23 16:16:29 [http-nio-28080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-23 16:16:29 [http-nio-28080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-05-23 16:16:29 [http-nio-28080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2023-05-23 16:16:29 [http-nio-28080-exec-1] WARN  o.s.web.servlet.PageNotFound - No mapping for OPTIONS /admin-api/student/getInfo
+2023-05-23 16:16:41 [http-nio-28080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-05-23 16:16:42 [http-nio-28080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-05-23 16:16:42 [http-nio-28080-exec-2] INFO  c.web.test.Controller.AuthController - 2202
+2023-05-23 16:16:42 [http-nio-28080-exec-3] INFO  c.web.test.Controller.AuthController - 2202
+2023-05-23 16:16:42 [http-nio-28080-exec-2] INFO  c.web.test.Controller.AuthController - 2202
+2023-05-23 16:16:42 [http-nio-28080-exec-3] INFO  c.web.test.Controller.AuthController - 2202
+2023-05-23 16:16:42 [http-nio-28080-exec-2] INFO  c.web.test.Controller.AuthController - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMjAyIiwiZXhwIjoxNjg0ODMzNDAyLCJpYXQiOjE2ODQ4Mjk4MDJ9.6qkYq1AS7oCceEnWlPfC2MyXU47lDErIaRu4WApeSHs
+2023-05-23 16:16:42 [http-nio-28080-exec-3] INFO  c.web.test.Controller.AuthController - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMjAyIiwiZXhwIjoxNjg0ODMzNDAyLCJpYXQiOjE2ODQ4Mjk4MDJ9.6qkYq1AS7oCceEnWlPfC2MyXU47lDErIaRu4WApeSHs
+2023-05-23 16:16:42 [http-nio-28080-exec-4] WARN  o.s.web.servlet.PageNotFound - No mapping for OPTIONS /admin-api/user/profile/get
+2023-05-23 16:16:45 [http-nio-28080-exec-5] WARN  o.s.web.servlet.PageNotFound - No mapping for OPTIONS /admin-api/student/getInfo
+2023-05-23 16:17:25 [http-nio-28080-exec-6] WARN  o.s.web.servlet.PageNotFound - No mapping for OPTIONS /admin-api/student/getInfo
+2023-05-23 16:17:25 [http-nio-28080-exec-10] INFO  c.w.t.Controller.StudentController - 2202
+2023-05-23 16:17:25 [http-nio-28080-exec-9] INFO  c.w.t.Controller.StudentController - 2202
+2023-05-23 16:17:25 [http-nio-28080-exec-9] INFO  c.w.t.Controller.StudentController - 李四
+2023-05-23 16:17:26 [http-nio-28080-exec-1] WARN  o.s.web.servlet.PageNotFound - No mapping for OPTIONS /admin-api/student/getInfo
+2023-05-23 16:17:26 [http-nio-28080-exec-2] INFO  c.w.t.Controller.StudentController - 2202
+2023-05-23 16:17:26 [http-nio-28080-exec-3] INFO  c.w.t.Controller.StudentController - 2202
+2023-05-23 16:17:26 [http-nio-28080-exec-2] INFO  c.w.t.Controller.StudentController - 李四
+2023-05-23 16:17:30 [http-nio-28080-exec-4] WARN  o.s.web.servlet.PageNotFound - No mapping for OPTIONS /admin-api/student/getInfo
+2023-05-23 16:17:30 [http-nio-28080-exec-5] INFO  c.w.t.Controller.StudentController - 2202
+2023-05-23 16:17:30 [http-nio-28080-exec-7] INFO  c.w.t.Controller.StudentController - 2202
+2023-05-23 16:17:30 [http-nio-28080-exec-5] INFO  c.w.t.Controller.StudentController - 李四
+2023-05-23 16:17:44 [http-nio-28080-exec-8] INFO  c.web.test.Controller.AuthController - 2201
+2023-05-23 16:17:44 [http-nio-28080-exec-8] INFO  c.web.test.Controller.AuthController - 2201
+2023-05-23 16:17:44 [http-nio-28080-exec-8] INFO  c.web.test.Controller.AuthController - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMjAxIiwiZXhwIjoxNjg0ODMzNDY0LCJpYXQiOjE2ODQ4Mjk4NjR9.82I94AFLfO3d7-IJIbe0V8lEvTdpElFgrv-VlBuivHM
+2023-05-23 16:17:44 [http-nio-28080-exec-6] INFO  c.web.test.Controller.AuthController - 2201
+2023-05-23 16:17:44 [http-nio-28080-exec-6] INFO  c.web.test.Controller.AuthController - 2201
+2023-05-23 16:17:44 [http-nio-28080-exec-6] INFO  c.web.test.Controller.AuthController - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMjAxIiwiZXhwIjoxNjg0ODMzNDY0LCJpYXQiOjE2ODQ4Mjk4NjR9.82I94AFLfO3d7-IJIbe0V8lEvTdpElFgrv-VlBuivHM
+2023-05-23 16:17:44 [http-nio-28080-exec-10] WARN  o.s.web.servlet.PageNotFound - No mapping for OPTIONS /admin-api/user/profile/get
+2023-05-23 16:17:45 [http-nio-28080-exec-9] WARN  o.s.web.servlet.PageNotFound - No mapping for OPTIONS /admin-api/student/getInfo
+2023-05-23 16:17:45 [http-nio-28080-exec-1] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 16:17:45 [http-nio-28080-exec-3] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 16:17:45 [http-nio-28080-exec-1] INFO  c.w.t.Controller.StudentController - 张三
+2023-05-23 16:18:09 [http-nio-28080-exec-4] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 16:18:09 [http-nio-28080-exec-2] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 16:18:09 [http-nio-28080-exec-2] INFO  c.w.t.Controller.StudentController - 张三
+2023-05-23 16:18:11 [http-nio-28080-exec-7] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 16:18:11 [http-nio-28080-exec-5] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 16:18:11 [http-nio-28080-exec-7] INFO  c.w.t.Controller.StudentController - 张三
+2023-05-23 16:18:14 [http-nio-28080-exec-8] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 16:18:14 [http-nio-28080-exec-6] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 16:18:14 [http-nio-28080-exec-8] INFO  c.w.t.Controller.StudentController - 张三
+2023-05-23 16:18:23 [http-nio-28080-exec-9] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 16:18:23 [http-nio-28080-exec-10] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 16:18:23 [http-nio-28080-exec-10] INFO  c.w.t.Controller.StudentController - 张三
+2023-05-23 16:18:32 [http-nio-28080-exec-3] INFO  c.web.test.Controller.AuthController - 2201
+2023-05-23 16:18:32 [http-nio-28080-exec-3] INFO  c.web.test.Controller.AuthController - 2201
+2023-05-23 16:18:32 [http-nio-28080-exec-3] INFO  c.web.test.Controller.AuthController - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMjAxIiwiZXhwIjoxNjg0ODMzNTEyLCJpYXQiOjE2ODQ4Mjk5MTJ9.ToplZQ5o8H4NJ7_FLtubRpagVKyHDY_0c6ODANeunh8
+2023-05-23 16:18:32 [http-nio-28080-exec-1] INFO  c.web.test.Controller.AuthController - 2201
+2023-05-23 16:18:32 [http-nio-28080-exec-1] INFO  c.web.test.Controller.AuthController - 2201
+2023-05-23 16:18:32 [http-nio-28080-exec-1] INFO  c.web.test.Controller.AuthController - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMjAxIiwiZXhwIjoxNjg0ODMzNTEyLCJpYXQiOjE2ODQ4Mjk5MTJ9.ToplZQ5o8H4NJ7_FLtubRpagVKyHDY_0c6ODANeunh8
+2023-05-23 16:18:32 [http-nio-28080-exec-4] WARN  o.s.web.servlet.PageNotFound - No mapping for OPTIONS /admin-api/user/profile/get
+2023-05-23 16:18:35 [http-nio-28080-exec-5] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 16:18:35 [http-nio-28080-exec-2] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 16:18:35 [http-nio-28080-exec-5] INFO  c.w.t.Controller.StudentController - 张三
+2023-05-23 16:20:00 [http-nio-28080-exec-10] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 16:20:00 [http-nio-28080-exec-9] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 16:20:00 [http-nio-28080-exec-9] INFO  c.w.t.Controller.StudentController - 张三
+2023-05-23 16:20:13 [http-nio-28080-exec-3] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 16:20:13 [http-nio-28080-exec-1] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 16:20:13 [http-nio-28080-exec-3] INFO  c.w.t.Controller.StudentController - 张三
+2023-05-23 16:20:40 [http-nio-28080-exec-2] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 16:20:40 [http-nio-28080-exec-4] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 16:20:40 [http-nio-28080-exec-4] INFO  c.w.t.Controller.StudentController - 张三
+2023-05-23 16:20:51 [http-nio-28080-exec-5] INFO  c.web.test.Controller.AuthController - 2201
+2023-05-23 16:20:51 [http-nio-28080-exec-5] INFO  c.web.test.Controller.AuthController - 2201
+2023-05-23 16:20:51 [http-nio-28080-exec-5] INFO  c.web.test.Controller.AuthController - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMjAxIiwiZXhwIjoxNjg0ODMzNjUxLCJpYXQiOjE2ODQ4MzAwNTF9.U4SnbsHX7LgbvkeLpmvDyiJNUcwWIbKnOpmyd5oA2UI
+2023-05-23 16:20:51 [http-nio-28080-exec-7] INFO  c.web.test.Controller.AuthController - 2201
+2023-05-23 16:20:51 [http-nio-28080-exec-7] INFO  c.web.test.Controller.AuthController - 2201
+2023-05-23 16:20:51 [http-nio-28080-exec-7] INFO  c.web.test.Controller.AuthController - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMjAxIiwiZXhwIjoxNjg0ODMzNjUxLCJpYXQiOjE2ODQ4MzAwNTF9.U4SnbsHX7LgbvkeLpmvDyiJNUcwWIbKnOpmyd5oA2UI
+2023-05-23 16:20:51 [http-nio-28080-exec-6] WARN  o.s.web.servlet.PageNotFound - No mapping for OPTIONS /admin-api/user/profile/get
+2023-05-23 16:20:52 [http-nio-28080-exec-8] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 16:20:52 [http-nio-28080-exec-10] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 16:20:52 [http-nio-28080-exec-10] INFO  c.w.t.Controller.StudentController - 张三
+2023-05-23 16:21:05 [http-nio-28080-exec-9] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 16:21:05 [http-nio-28080-exec-1] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 16:21:05 [http-nio-28080-exec-9] INFO  c.w.t.Controller.StudentController - 张三
+2023-05-23 16:21:06 [http-nio-28080-exec-2] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 16:21:06 [http-nio-28080-exec-3] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 16:21:06 [http-nio-28080-exec-3] INFO  c.w.t.Controller.StudentController - 张三
+2023-05-23 16:21:11 [http-nio-28080-exec-4] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 16:21:11 [http-nio-28080-exec-5] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 16:21:11 [http-nio-28080-exec-4] INFO  c.w.t.Controller.StudentController - 张三
+2023-05-23 16:21:15 [http-nio-28080-exec-6] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 16:21:15 [http-nio-28080-exec-7] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 16:21:15 [http-nio-28080-exec-7] INFO  c.w.t.Controller.StudentController - 张三
+2023-05-23 16:21:43 [http-nio-28080-exec-8] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 16:21:43 [http-nio-28080-exec-10] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 16:21:43 [http-nio-28080-exec-10] INFO  c.w.t.Controller.StudentController - 张三
+2023-05-23 16:21:55 [http-nio-28080-exec-1] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 16:21:55 [http-nio-28080-exec-1] INFO  c.w.t.Controller.StudentController - 张三
+2023-05-23 16:21:58 [http-nio-28080-exec-9] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 16:21:58 [http-nio-28080-exec-9] INFO  c.w.t.Controller.StudentController - 张三
+2023-05-23 16:22:03 [http-nio-28080-exec-2] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 16:22:03 [http-nio-28080-exec-2] INFO  c.w.t.Controller.StudentController - 张三
+2023-05-23 16:22:09 [http-nio-28080-exec-3] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 16:22:09 [http-nio-28080-exec-3] INFO  c.w.t.Controller.StudentController - 张三
+2023-05-23 16:25:03 [http-nio-28080-exec-6] INFO  c.web.test.Controller.AuthController - 2201
+2023-05-23 16:25:03 [http-nio-28080-exec-6] INFO  c.web.test.Controller.AuthController - 2201
+2023-05-23 16:25:03 [http-nio-28080-exec-6] INFO  c.web.test.Controller.AuthController - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMjAxIiwiZXhwIjoxNjg0ODMzOTAzLCJpYXQiOjE2ODQ4MzAzMDN9.P2r5liqt5d63dW7DGdd_65hx36V3UrGtQyWgOlX90wk
+2023-05-23 16:25:03 [http-nio-28080-exec-7] INFO  c.web.test.Controller.AuthController - 2201
+2023-05-23 16:25:03 [http-nio-28080-exec-7] INFO  c.web.test.Controller.AuthController - 2201
+2023-05-23 16:25:03 [http-nio-28080-exec-7] INFO  c.web.test.Controller.AuthController - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMjAxIiwiZXhwIjoxNjg0ODMzOTAzLCJpYXQiOjE2ODQ4MzAzMDN9.P2r5liqt5d63dW7DGdd_65hx36V3UrGtQyWgOlX90wk
+2023-05-23 16:25:03 [http-nio-28080-exec-8] WARN  o.s.web.servlet.PageNotFound - No mapping for OPTIONS /admin-api/user/profile/get
+2023-05-23 16:25:06 [http-nio-28080-exec-10] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 16:25:06 [http-nio-28080-exec-10] INFO  c.w.t.Controller.StudentController - 张三
+2023-05-23 16:25:06 [http-nio-28080-exec-1] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 16:25:28 [http-nio-28080-exec-6] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 16:25:28 [http-nio-28080-exec-6] INFO  c.w.t.Controller.StudentController - 张三
+2023-05-23 16:25:28 [http-nio-28080-exec-7] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 16:25:54 [http-nio-28080-exec-8] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 16:25:54 [http-nio-28080-exec-8] INFO  c.w.t.Controller.StudentController - 张三
+2023-05-23 16:25:54 [http-nio-28080-exec-10] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 16:26:02 [http-nio-28080-exec-1] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 16:26:02 [http-nio-28080-exec-1] INFO  c.w.t.Controller.StudentController - 张三
+2023-05-23 16:26:02 [http-nio-28080-exec-9] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 16:26:14 [http-nio-28080-exec-3] INFO  c.web.test.Controller.AuthController - 2202
+2023-05-23 16:26:14 [http-nio-28080-exec-3] INFO  c.web.test.Controller.AuthController - 2202
+2023-05-23 16:26:14 [http-nio-28080-exec-5] INFO  c.web.test.Controller.AuthController - 2202
+2023-05-23 16:26:14 [http-nio-28080-exec-5] INFO  c.web.test.Controller.AuthController - 2202
+2023-05-23 16:26:19 [http-nio-28080-exec-4] INFO  c.web.test.Controller.AuthController - 2202
+2023-05-23 16:26:19 [http-nio-28080-exec-4] INFO  c.web.test.Controller.AuthController - 2202
+2023-05-23 16:26:19 [http-nio-28080-exec-4] INFO  c.web.test.Controller.AuthController - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMjAyIiwiZXhwIjoxNjg0ODMzOTc5LCJpYXQiOjE2ODQ4MzAzNzl9.F0PKFbDfwrHh8UwO0ssvP7u25A4CJ1HB7TdMhWP8B8Y
+2023-05-23 16:26:19 [http-nio-28080-exec-6] INFO  c.web.test.Controller.AuthController - 2202
+2023-05-23 16:26:19 [http-nio-28080-exec-6] INFO  c.web.test.Controller.AuthController - 2202
+2023-05-23 16:26:19 [http-nio-28080-exec-6] INFO  c.web.test.Controller.AuthController - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMjAyIiwiZXhwIjoxNjg0ODMzOTc5LCJpYXQiOjE2ODQ4MzAzNzl9.F0PKFbDfwrHh8UwO0ssvP7u25A4CJ1HB7TdMhWP8B8Y
+2023-05-23 16:26:19 [http-nio-28080-exec-7] WARN  o.s.web.servlet.PageNotFound - No mapping for OPTIONS /admin-api/user/profile/get
+2023-05-23 16:26:21 [http-nio-28080-exec-8] INFO  c.w.t.Controller.StudentController - 2202
+2023-05-23 16:26:21 [http-nio-28080-exec-8] INFO  c.w.t.Controller.StudentController - 李四
+2023-05-23 16:26:21 [http-nio-28080-exec-10] INFO  c.w.t.Controller.StudentController - 2202
+2023-05-23 16:27:49 [http-nio-28080-exec-2] INFO  c.w.t.Controller.StudentController - 2202
+2023-05-23 16:27:49 [http-nio-28080-exec-2] INFO  c.w.t.Controller.StudentController - 李四
+2023-05-23 16:27:49 [http-nio-28080-exec-3] INFO  c.w.t.Controller.StudentController - 2202
+2023-05-23 16:34:40 [http-nio-28080-exec-4] INFO  c.web.test.Controller.AuthController - 2201
+2023-05-23 16:34:40 [http-nio-28080-exec-4] INFO  c.web.test.Controller.AuthController - 2201
+2023-05-23 16:34:40 [http-nio-28080-exec-4] INFO  c.web.test.Controller.AuthController - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMjAxIiwiZXhwIjoxNjg0ODM0NDgwLCJpYXQiOjE2ODQ4MzA4ODB9.BZGkO0yUxgP2gBapGYlAYDsatAbn6tRe2By5HP25poc
+2023-05-23 16:34:40 [http-nio-28080-exec-6] INFO  c.web.test.Controller.AuthController - 2201
+2023-05-23 16:34:40 [http-nio-28080-exec-6] INFO  c.web.test.Controller.AuthController - 2201
+2023-05-23 16:34:40 [http-nio-28080-exec-6] INFO  c.web.test.Controller.AuthController - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMjAxIiwiZXhwIjoxNjg0ODM0NDgwLCJpYXQiOjE2ODQ4MzA4ODB9.BZGkO0yUxgP2gBapGYlAYDsatAbn6tRe2By5HP25poc
+2023-05-23 16:34:40 [http-nio-28080-exec-7] WARN  o.s.web.servlet.PageNotFound - No mapping for OPTIONS /admin-api/user/profile/get
+2023-05-23 16:36:42 [http-nio-28080-exec-6] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 16:36:42 [http-nio-28080-exec-6] INFO  c.w.t.Controller.StudentController - 张三
+2023-05-23 16:36:42 [http-nio-28080-exec-7] INFO  c.w.t.Controller.StudentController - 2201
+2023-05-23 16:37:04 [http-nio-28080-exec-10] WARN  o.s.web.servlet.PageNotFound - No mapping for OPTIONS /admin-api/user/profile/get
+2023-05-23 17:12:06 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14m23s859ms).
+2023-05-23 17:21:23 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m16s692ms).
+2023-05-23 17:42:43 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=21m20s346ms).
+2023-05-23 18:01:57 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m44s386ms).
+2023-05-23 18:14:18 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11m50s784ms).
+2023-05-23 18:15:45 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-05-23 18:15:45 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

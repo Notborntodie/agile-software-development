@@ -20,6 +20,14 @@ export function getstulist(){
 }
 
 
+export function subumitrevlist(reviewers){
+   return request({
+    url :'stulist/sumbitrev',
+    method:'post',
+    data: reviewers
+   })
+}
+
 
 
 

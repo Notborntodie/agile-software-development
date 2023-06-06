@@ -15,12 +15,17 @@ public interface UserMapper {
 
     void changeinfo(UserDemo userDemo);
 
-    void changepass(Userpass userpass);
+    void changepass(User user);
 
     User getUser(String username);
     void   setUser(User user);
 
     void  setStudent(Student student);
+
+
+    void changeStudent(Student student);
+
+
     void updateStudent(Student student);
 
     Student getStudentByUid(int userid);
@@ -29,6 +34,10 @@ public interface UserMapper {
     Student getStudentBySid(int studentId);
 
     void setGradeSummary(GradeSummary gradesummary);
+
+    void changeGpa(GradeSummary gradeSummary);
+
+
 
     GradeSummary  findByStudentId(int studentId);
 

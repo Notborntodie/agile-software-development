@@ -5,6 +5,62 @@
   <h1 class="page-title">学工管理</h1>
 
 <el-collapse v-model="activeNames">
+  <el-collapse-item title="导入评审名单" name="0">
+    <el-table :data="pagedReviewers" style="width: 100%">
+  
+      <el-table-column prop="name" label="姓名">
+        <template slot-scope="{ row, $index }">
+          <el-input v-model="row.name" @change="updateName2(row, $index)"></el-input>
+        </template>
+      </el-table-column>
+
+      <el-table-column prop="id" label="工号">
+        <template slot-scope="{ row, $index }">
+          <el-input v-model="row.id" @change="updateId2(row, $index)"></el-input>
+        </template>
+      </el-table-column>
+
+      <el-table-column prop="level" label="评审类型">
+    <template slot-scope="{ row, $index }">
+        <el-select v-model="row.level" @change="updateLevel2(row,$index)"  multiple placeholder="请选择评审类型">
+            <el-option
+                v-for="item in levels"
+                :key="item.value"
+                :label="item.label"
+                :value="item.value">
+            </el-option>
+        </el-select>
+    </template>
+</el-table-column>
+
+
+      <el-table-column label="操作" >
+        <template slot-scope="{ row }">
+          <el-button class="custom-button" size="small" plain @click="deleteRow2(row)" type="danger">删除</el-button>
+        </template>
+      </el-table-column>
+    </el-table>
+
+    <el-pagination
+      @size-change="handleSizeChange2"
+      @current-change="handleCurrentChange2"
+      :current-page="currentPage2"
+      :page-size="pageSize2"
+      layout="total, sizes, prev, pager, next, jumper"
+    >
+    </el-pagination>
+
+    <el-button class="custom-button" size="small" plain @click="addRow2">添加一行</el-button>
+
+   
+      <div class="action-buttons">
+        <el-button class="custom-button" size="small" plain @click="save2">保存</el-button>
+        <el-button class="custom-button" size="small" plain @click="submit2">上传评审名单</el-button>
+      </div>
+  
+</el-collapse-item>
+
+
   <el-collapse-item title="导入学生名单" name="1">
      <el-table :data="pagedStudents" style="width: 100%">
   
@@ -130,11 +186,17 @@
 import * as XLSX from 'xlsx'
 import { subumitstulist } from '/api/stulist'
 import {getstulist} from  '/api/stulist'
+import {subumitrevlist} from  '/api/stulist'
 
 export default {
   
   data() {
     return {
+      reviewers: [],
+      pagedReviewers: [],
+      currentPage2: 1,
+      pageSize2: 10,
+
       students: [  
         //{ name: '张三', id: '20210001', gpa: 3.5,},
         //{ name: '李四', id: '20210002', gpa: 3.2 },
@@ -148,27 +210,147 @@ export default {
     backendPageSize: 10, // 学生评测表每页的条目数
 
       backendStudents: [],
+
+
+      levels: [
+        { value: 3, label: '学年总结' },
+        { value: 4, label: '科研情况' },
+        { value: 5, label: '骨干服务' },
+        {value: 6 ,label: '社会实践'},
+        {value :7 ,label: '志愿服务'}
+        // 添加更多选项
+      ],
     }
 
   },
 
   async mounted() {
-    /*
+    
     const storedData = localStorage.getItem('students');
     if (storedData) {
       this.students = JSON.parse(storedData);
     }
-    */
+
+    const storedData2 = localStorage.getItem('reviewers');
+    if (storedData2) {
+      this.reviewers = JSON.parse(storedData2);
+    }
+    
 
     this.handleDataChange();  // 更新分页数据
-
-    
+    this.handleDataChange2();
   
     await this.fetchData();
 }
 
   ,
   methods: {
+    handleFileUpload2(event) {
+      const file = event.target.files[0];
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        const data = new Uint8Array(event.target.result);
+        const workbook = XLSX.read(data, { type: 'array' });
+        const sheetName = workbook.SheetNames[0];
+        const worksheet = workbook.Sheets[sheetName];
+        const rows = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
+        const headers = rows[0];
+        const dataRows = rows.slice(1);
+        const reviewers = dataRows.map(row => {
+          const reviewer = {};
+          headers.forEach((header, index) => {
+            reviewer[header] = row[index];
+          });
+          return reviewer;
+        });
+        this.reviewers = reviewers;
+        this.handleDataChange2();
+        localStorage.setItem('reviewers', JSON.stringify(reviewers));
+      };
+      reader.readAsArrayBuffer(file);
+    },
+
+    addRow2() {
+      this.reviewers.push({});
+      this.handleDataChange2();
+    },
+
+    deleteRow2(row) {
+      const index = this.reviewers.indexOf(row);
+      if (index !== -1) {
+        this.reviewers.splice(index, 1);
+        this.handleDataChange2();
+      }
+    },
+
+
+    /*
+    
+    updateName2(row, $index) {
+      const globalIndex = (this.currentPage2 - 1) * this.pageSize2 + $index;
+      this.reviewers[globalIndex].name = row.name;
+    },
+    updateId2(row, $index) {
+      const globalIndex = (this.currentPage2 - 1) * this.pageSize2 + $index;
+      this.reviewers[globalIndex].id = row.id;
+    },
+    updateLevel2(row, $index) {
+      const globalIndex = (this.currentPage2 - 1) * this.pageSize2 + $index;
+      this.reviewers[globalIndex].level = [...row.level];
+    },
+    */
+
+    handleSizeChange2(val) {
+      this.pageSize2 = val;
+      this.updatePagedData2();
+    },
+
+    handleCurrentChange2(val) {
+      this.currentPage2 = val;
+      this.updatePagedData2();
+    },
+
+    updatePagedData2() {
+      const start = (this.currentPage2 - 1) * this.pageSize2;
+      const end = this.currentPage2 * this.pageSize2;
+      this.pagedReviewers = this.reviewers.slice(start, end);
+    },
+
+    handleDataChange2() {
+      this.updatePagedData2();
+    },
+
+    save2() {
+      localStorage.setItem('reviewers', JSON.stringify(this.reviewers));
+      //this.$message.success(this.reviewers[0].level.join(", "));
+
+      this.$message.success('保存成功');
+    },
+
+    submit2() {
+      let reviewers = JSON.parse(localStorage.getItem('reviewers'));
+      subumitrevlist(reviewers)
+      .then(res =>{
+        if (res.code===200){
+                //this.$message.success(res.data.data.accessToken)
+          this.$message.success('上传评审名单成功')
+        }else{
+          this.$message.error("上传失败")
+        }
+        }).catch(() => {
+          this.$message.error('上传失败')
+        })
+      
+    },
+
+
+
+
+
+
+
+
+
     handleFileUpload(event) {
       const file = event.target.files[0]
       const reader = new FileReader()
@@ -239,18 +421,24 @@ deleteRow(row) {
   }
 },
 
+/*
+    updateName(row, $index){
+     const globalIndex = (this.currentPage - 1) * this.pageSize + $index;
+     this.students[globalIndex].name= row.name;
+  },
 
-    editGPA(event, index) {
-      this.students[index].gpa = event.target.textContent.trim()
+
+    updateId(row, $index) {
+      const globalIndex = (this.currentPage - 1) * this.pageSize + $index;
+      this.students[globalIndex].id = row.id;
     },
 
-    editname(event, index) {
-      this.students[index].name = event.target.textContent.trim()
+    updateGPA(row, $index){
+      const globalIndex = (this.currentPage - 1) * this.pageSize + $index;
+     this.students[globalIndex].gpa= row.gpa;
     },
 
-    editid(event, index) {
-      this.students[index].id = event.target.textContent.trim()
-    },
+*/
 
     exportToExcel() {
       const worksheet = XLSX.utils.json_to_sheet(this.backendStudents)
@@ -263,16 +451,17 @@ deleteRow(row) {
       this.$message.success('保存成功')
     },
     submit1(){
-      subumitstulist(this.students)
+      let students = JSON.parse(localStorage.getItem('students'));
+      subumitstulist(students)
       .then(res =>{
         if (res.code===200){
                 //this.$message.success(res.data.data.accessToken)
           this.$message.success('上传学生名单成功')
         }else{
-          //this.$message.error("错误1")
+          this.$message.error("上传失败")
         }
         }).catch(() => {
-          //this.$message.error('错误2')
+          this.$message.error('上传失败')
         })
       }
 ,

@@ -1,0 +1,15 @@
+2023-05-30 14:36:28 [restartedMain] INFO  com.web.test.TestApplication - Starting TestApplication using Java 1.8.0_362 on zhengyanchendeMacBook-Pro.local with PID 43948 (/Users/zhengyanchen/Desktop/spring/test/target/classes started by zhengyanchen in /Users/zhengyanchen/Desktop/spring/test)
+2023-05-30 14:36:28 [restartedMain] INFO  com.web.test.TestApplication - No active profile set, falling back to 1 default profile: "default"
+2023-05-30 14:36:29 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-05-30 14:36:29 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-05-30 14:36:30 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-05-30 14:36:30 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-05-30 14:36:30 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+2023-05-30 14:36:31 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 28080 (http)
+2023-05-30 14:36:31 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-05-30 14:36:31 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-05-30 14:36:31 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-05-30 14:36:31 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2324 ms
+2023-05-30 14:36:32 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-05-30 14:36:33 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 28080 (http) with context path ''
+2023-05-30 14:36:33 [restartedMain] INFO  com.web.test.TestApplication - Started TestApplication in 5.433 seconds (JVM running for 6.688)

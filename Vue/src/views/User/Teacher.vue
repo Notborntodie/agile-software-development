@@ -270,32 +270,52 @@ async handleSubmit() {
 }
 
 ,
-*/ handleSubmit() {
-  //this.$message.success(this.selectedCategory);
-  
+*/
+
+async handleSubmit() {
+  let message = '';
   if (this.selectedCategory == 'personal') {
-        this.handleSubmit1()
-        //this.$message.success(this.selectedCategory);
-      // Trigger event for '个人学年总结'
+    message = '你是个人学年总结的评委，确定提交吗？';
+  } else if (this.selectedCategory == 'research') {
+    message = '你是科研情况的评委，确定提交吗？';
+  } else if (this.selectedCategory == 'service') {
+    message = '你是学生骨干服务岗位的评委，确定提交吗？';
+  } else if (this.selectedCategory == 'practice') {
+    message = '你是社会实践的评委，确定提交吗？';
+  } else if (this.selectedCategory == 'volunteer') {
+    message = '你是志愿服务的评委，确定提交吗？';
+  } else {
+    this.$message({ type: 'error', message: '请选择一个评审类型' });
+    return;
+  }
+
+  try {
+    // Confirm dialog
+    await this.$confirm(message, '提示', {
+      confirmButtonText: '确定',
+      cancelButtonText: '取消',
+      type: 'warning'
+    });
+
+    // Continue with submit
+    if (this.selectedCategory == 'personal') {
+      this.handleSubmit1()
     } else if (this.selectedCategory == 'research') {
-        this.handleSubmit2()
-      // Trigger event for '科研情况'
+      this.handleSubmit2()
     } else if (this.selectedCategory == 'service') {
       this.handleSubmit3()
-
-      // Trigger event for '学生骨干服务岗位'
     } else if (this.selectedCategory == 'practice') {
       this.handleSubmit4()
-      
-      // Trigger event for '社会实践'
     } else if (this.selectedCategory == 'volunteer') {
       this.handleSubmit5()
-      // Trigger event for '志愿服务'
-    } else {
-      //this.$message.success();
-      // Trigger default event or error handling
     }
-  },
+  } catch (err) {
+    // User cancelled the dialog
+    this.$message({ type: 'info', message: '已取消提交' });
+  }
+},
+
+
   
     handleSubmit1(){
 
@@ -490,29 +510,61 @@ handleSubmit5() {
 
 
 
-          
-        async fetchData() {
-          try {
-            const response1 = await getTable1();
-            this.tableData1 = response1.data;
- 
-            const response2 = await getTable2();
-            this.tableData2 = response2.data;
-    
-            const response3 = await getTable3();
-            this.tableData3 = response3.data;
 
-            const response4 = await getTable4();
-            this.tableData4 = response4.data;
-
-            const response5 = await getTable5();
-            this.tableData5 = response5.data;
-
+    async fetchData() {
+      try {
+      const response1 = await getTable1();
+      if (response1.code == 200){
+        this.tableData1 = response1.data;
+      }
       } catch (error) {
+      
+        this.categories = this.categories.filter(category => category.label != '个人学年总结');
         console.error(error);
       }
-     
+
+      try {
+      const response2 = await getTable2();
+      if (response2.code == 200){
+        this.tableData2 = response2.data;
+      }
+      } catch (error) {
+      
+        this.categories = this.categories.filter(category => category.label != '科研情况');
+        console.error(error);
+      }
+
+      try {
+      const response3 = await getTable3();
+      if (response3.code == 200){
+        this.tableData3 = response3.data;
+      }
+      } catch (error) {
+        this.categories = this.categories.filter(category => category.label != '学生骨干服务岗位');
+        console.error(error);
+      }
+
+      try {
+      const response4 = await getTable4();
+      if (response4.code == 200){
+        this.tableData4 = response4.data;
+      }
+      } catch (error) {
+        this.categories = this.categories.filter(category => category.label != '社会实践');
+        console.error(error);
+      }
+
+      try {
+      const response5 = await getTable5();
+      if (response5.code == 200){
+        this.tableData5 = response5.data;
+      }
+      } catch (error) {
+        this.categories = this.categories.filter(category => category.label != '志愿服务');
+        console.error(error);
+      }
     }
+
   }
 
 

@@ -13,7 +13,7 @@
                       <i class="el-icon-house"></i>
                       <span slot="title">about</span>
                   </el-menu-item>
-                -->
+                
 
                 
 
@@ -21,6 +21,8 @@
                       <i class="el-icon-menu"></i>
                       <span slot="title">学工管理</span>
                   </el-menu-item>
+
+
 
                   <el-menu-item index="/rbac/user/teacher" @click="$router.push('/rbac/user/teacher')" >
                       <i class="el-icon-menu"></i>
@@ -32,42 +34,26 @@
                       <span slot="title">学生页面</span>
                   </el-menu-item>
 
-
-
-                  <!--
-
-                  <el-submenu index="/rbac/user/">
-                    <template slot="title">
-                      <i class="el-icon-menu"></i>
-                      <span>学生页面</span>
-                    </template>
-                  <el-menu-item index="/rbac/user/student1" @click="$router.push('/rbac/user/student1')">
-                  学生评测信息填报
-                  </el-menu-item>
-                  <el-menu-item index="/rbac/user/student3" @click="$router.push('/rbac/user/student3')">
-                    学生基础信息填报
-                  </el-menu-item>
-
-                  <el-menu-item index="/rbac/user/student2" @click="$router.push('/rbac/user/student2')">
-                    学生评测成绩查看
-                  </el-menu-item>
-
-                  </el-submenu>
-
                 -->
-
-                  <el-menu-item index="/rbac/user/add" @click="$router.push('/rbac/user/add')">
-                      <i class="el-icon-setting"></i>
-                      <span slot="title">用户信息</span>
-                  </el-menu-item>
-      
                 
+                  <el-menu-item 
+                            v-for="(menu, index) in menuList" 
+                            :key="index"
+                            :index="menu.path"
+                            @click="$router.push(menu.path)"
+                          >
+                            <i class="el-icon-menu"></i>
+                            <span slot="title">{{ menu.name }}</span>
+                   </el-menu-item>
 
-                  <el-menu-item index="/logout" @click="logout">
+                   <el-menu-item index="/logout" @click="logout">
                       <i class="el-icon-setting"></i>
                       <span slot="title">logout</span>
                   </el-menu-item>
+
                 </template>
+
+
               </collapse-transition>
               </el-menu>
     
@@ -81,8 +67,18 @@
 
 <script>
 import {removeToken} from '/utils/auth'
+import{getMenu} from'/api/login'
+
 export default {
   name: "MyComponent",
+  data() {
+    return {
+      menuList: [] // 菜单列表数据
+    };
+  },
+  async mounted() {
+    await this.fetchMenuList();
+  },
   methods: {
     logout() {
       this.$confirm('确定注销并退出系统吗？', '提示').then(() => {
@@ -91,6 +87,19 @@ export default {
         this.$router.push({ path: '/login' })
       }).catch(() => {});
     },
+    async fetchMenuList() {   
+      try {
+      const response= await getMenu();
+      //this.$message(String(response.code))
+      if (response.code == 200){
+        //this.$message("Okkkkk")
+        this.menuList = response.data;
+      }
+     } catch (error) {
+        this.$message(error.$message)
+        console.error(error);
+      }
+    }
   },
 };
 </script>

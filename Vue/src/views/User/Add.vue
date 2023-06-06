@@ -34,14 +34,10 @@ export default {
   data() {
     return {
       user: {
-        username: '',
         oldpassword: '',
         newpassword: '',
       },
       rules: {
-        username: [
-          { required: true, message: "请输入用户名", trigger: "blur" },
-        ],
         oldpassword: [{ required: true, message: "请输入旧密码", trigger: "blur" }],
         newpassword: [{ required: true, message: "请输入新密码", trigger: "blur" }],
       },
@@ -51,13 +47,13 @@ export default {
     submitForm() {
       this.$refs.form.validate(valid => {
         if (valid) {   
-          changepass(this.user.username,this.user.oldpassword,this.user.newpassword)
+          changepass(this.user.oldpassword,this.user.newpassword)
           .then(res =>{
               if (res.code===200){
                 //this.$message.success(res.data.data.accessToken)
                 this.$message.success('修改密码成功')
               }else{
-                this.$message.error("密码错误"+res.code)
+                this.$message.error(res.msg)
                 this.loading = false
               }
           }).catch(() => {

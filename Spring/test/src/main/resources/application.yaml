@@ -5,6 +5,10 @@ server:
 
 
 spring:
+
+  redis:
+      host: 127.0.0.1
+      port: 6379
   jackson:
     #日期格式化
     date-format: yyyy-MM-dd HH:mm:ss

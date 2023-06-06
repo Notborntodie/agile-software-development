@@ -26,4 +26,23 @@ nav {
     }
   }
 }
+
+
+
+/* 修改消息提示框的背景和文字颜色 */
+.el-message {
+    background-color: #282c34 !important; /* 修改背景颜色 */
+    color: #fff !important; /* 修改文字颜色 */
+}
+
+/* 修改成功消息提示框的图标颜色 */
+.el-message--success .el-message__icon {
+    color: #00d1b2 !important;
+}
+
+/* 修改错误消息提示框的图标颜色 */
+.el-message--error .el-message__icon {
+    color: #ff3860 !important;
+}
+
 </style>

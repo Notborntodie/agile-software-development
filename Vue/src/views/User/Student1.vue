@@ -198,8 +198,9 @@
 
   <script>
   //import { changeinfo } from '@/api/login'
-  import { getInfo } from '/api/info'
-  import { getEvainfo} from '/api/info'
+import {getInfo} from '/api/info'
+
+import { getEvainfo} from '/api/info'
   import { changeEvainfo } from '/api/info'
   import {getBasicinfo} from  '/api/info'
   import { changeBasicinfo } from '/api/info'
@@ -209,14 +210,14 @@
       return {
 
         uu:{
-          name: '',
-          studentNumber: '',
-          academicGrade: '',
-          researchContent: '',
-          studentLeadershipContent: '',
-          socialPracticeContent: '',
-          volunteerServiceContent: '',
-          personalSummaryContent: '',
+          name: 'xxx',
+          studentNumber: '222',
+          academicGrade: '67',
+          researchContent: 'sss',
+          studentLeadershipContent: '8909',
+          socialPracticeContent: '900',
+          volunteerServiceContent: 'wwww',
+          personalSummaryContent: 'jhi',
 
         }
 ,
@@ -279,25 +280,35 @@
     },
     async mounted() {
   // 页面加载时从本地存储中读取用户数据
-        const response0 = await getInfo()
-          if (response0.code==200){
-            this.uu=response0.data            
-            //this.$message.success(response.data.name)
-          }
+  /*
+  const response0 = await getInfo();
+  if (response0.code == 200){
+    this.uu = response0.data;
+    //this.$message.success(response0.data.name);
+  }
+  */
 
-          const response1 = await getEvainfo()
-          if (response1.code==200){
-            this.user=response1.data
-            //this.$message.success(response.data.name)
-          }
-          const response2=await getBasicinfo()
-          if (response2.code==200){
-            this.user2=response2.data
-            //this.$message.success(response.data.name)
-          }
-          this.getUserData()
-          this.getUserData2()
-        },
+  const response0=await getInfo();
+  
+  if (response0.code==200){
+    this.uu=response0.data;
+  }
+
+  const response1 = await getEvainfo();
+  if (response1.code == 200){
+    this.user = response1.data;
+  }
+
+  const response2 = await getBasicinfo();
+  if (response2.code == 200){
+    this.user2 = response2.data;
+    //this.$message.success(response2.data.name);
+  }
+
+  this.getUserData();
+  this.getUserData2();
+}
+,
         methods: {
           submitForm() {
             const data = localStorage.getItem(this.storageKey)
