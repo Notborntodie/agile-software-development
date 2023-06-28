@@ -1,10 +1,17 @@
 import request from '/utils/request'
 
+
+
+
+
+
+
 // 用户登录
-export function login(username, password) {
+export function login(username, password,captchaText) {
   const data = {
     username,
-    password
+    password,
+    captchaText
   }
   return request({
     url: '/auth/login',
@@ -16,6 +23,13 @@ export function login(username, password) {
 export function  getMenu(){
   return  request({
     url :'/auth/menu',
+    method : 'get',
+  })
+}
+
+export function getPic(){
+  return  request({
+    url :'/auth/captcha',
     method : 'get',
   })
 }

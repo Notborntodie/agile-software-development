@@ -51,9 +51,22 @@ public class MyInterceptor implements HandlerInterceptor {
 
         String authHeader=request.getHeader( "Authorization");
         if (authHeader==null){
-            return  true;
+
+            //return true;
+
+            String url = request.getRequestURI();
+            if (url.startsWith("/admin-api/auth")){
+                return  true;
+            }else{
+                return  false;
+            }
+
         }
+
+
         String token = authHeader.substring(7);
+        System.out.println("Token");
+        System.out.println(token);
 
 
 

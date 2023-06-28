@@ -1,0 +1,46 @@
+2023-06-27 23:32:57 [restartedMain] INFO  com.web.test.TestApplication - Starting TestApplication using Java 1.8.0_362 on localhost with PID 54830 (/Users/zhengyanchen/Desktop/spring/test/target/classes started by zhengyanchen in /Users/zhengyanchen/Desktop/spring/test)
+2023-06-27 23:32:57 [restartedMain] INFO  com.web.test.TestApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-27 23:32:57 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-06-27 23:32:57 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-06-27 23:32:59 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-06-27 23:32:59 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-06-27 23:32:59 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
+2023-06-27 23:33:00 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 28080 (http)
+2023-06-27 23:33:00 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-06-27 23:33:00 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-06-27 23:33:00 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-06-27 23:33:00 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2698 ms
+2023-06-27 23:33:02 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-06-27 23:33:02 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 28080 (http) with context path ''
+2023-06-27 23:33:02 [http-nio-28080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-27 23:33:02 [http-nio-28080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-06-27 23:33:02 [http-nio-28080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2023-06-27 23:33:03 [restartedMain] INFO  com.web.test.TestApplication - Started TestApplication in 6.327 seconds (JVM running for 7.501)
+2023-06-27 23:34:03 [restartedMain] INFO  com.web.test.TestApplication - Starting TestApplication using Java 1.8.0_362 on localhost with PID 54867 (/Users/zhengyanchen/Desktop/spring/test/target/classes started by zhengyanchen in /Users/zhengyanchen/Desktop/spring/test)
+2023-06-27 23:34:03 [restartedMain] INFO  com.web.test.TestApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-27 23:34:03 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-06-27 23:34:03 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-06-27 23:34:04 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-06-27 23:34:04 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-06-27 23:34:04 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 27 ms. Found 0 Redis repository interfaces.
+2023-06-27 23:34:05 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 28080 (http)
+2023-06-27 23:34:05 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-06-27 23:34:05 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-06-27 23:34:05 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-06-27 23:34:05 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1759 ms
+2023-06-27 23:34:06 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-06-27 23:34:06 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 28080 (http) with context path ''
+2023-06-27 23:34:07 [restartedMain] INFO  com.web.test.TestApplication - Started TestApplication in 4.318 seconds (JVM running for 5.253)
+2023-06-27 23:34:11 [http-nio-28080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-27 23:34:11 [http-nio-28080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-06-27 23:34:11 [http-nio-28080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2023-06-27 23:59:47 [http-nio-28080-exec-8] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-27 23:59:48 [http-nio-28080-exec-8] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-27 23:59:48 [http-nio-28080-exec-8] INFO  c.web.test.Controller.AuthController - 111
+2023-06-27 23:59:57 [http-nio-28080-exec-9] INFO  c.web.test.Controller.AuthController - 222
+2023-06-27 23:59:57 [http-nio-28080-exec-9] INFO  c.web.test.Controller.AuthController - 111
+2023-06-27 23:59:57 [http-nio-28080-exec-9] INFO  c.web.test.Controller.AuthController - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMjIiLCJleHAiOjE2ODc4ODUxOTcsImlhdCI6MTY4Nzg4MTU5N30.3CgbolJL9ue4NZHEYUEy_KEJsKd-OJMqCr-x3LM7C-0
+2023-06-27 23:59:57 [http-nio-28080-exec-2] WARN  o.s.web.servlet.PageNotFound - No mapping for OPTIONS /admin-api/user/profile/get
+2023-06-27 23:59:57 [http-nio-28080-exec-1] INFO  com.web.test.MyInterceptor - /admin-api/stulist/
+2023-06-27 23:59:57 [http-nio-28080-exec-1] INFO  com.web.test.MyInterceptor - /admin-api/auth
+2023-06-27 23:59:57 [http-nio-28080-exec-3] INFO  com.web.test.MyInterceptor - /admin-api/auth

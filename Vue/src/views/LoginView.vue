@@ -13,6 +13,16 @@
     <el-form-item prop="password">
       <el-input type="password" v-model="loginForm.password" placeholder="请输入密码" ref="password" @keyup.up.native="focusUsername" ></el-input>
     </el-form-item>
+ <el-form-item prop="captchaText">
+      <el-input v-model="captchaText" placeholder="请输入验证码"  ></el-input>
+    </el-form-item>
+
+    <div>
+    <img :src="captchaSrc" @click="refreshCaptcha" width="150" />
+    </div>
+<!--<input type="text" name="captchaText" placeholder="输入验证码">-->
+
+    
     <el-form-item>
       <el-button class="custom-button"  plain @click="do_login" :loading="loading">登录</el-button>
     </el-form-item>
@@ -43,6 +53,7 @@
 
 <script>
 import {login} from '/api/login.js'
+import { getPic} from '/api/login'
 import {setToken} from '/utils/auth'
 import { EventBus } from '/api/EventBus'
 
@@ -63,10 +74,23 @@ export default {
         username: [{ required: true, message: '请输入用户名', trigger: 'blur' }],
         password: [{ required: true, message: '请输入密码', trigger: 'blur' }]
       },
-      loading: false
+      loading: false,
+      captchaSrc: '',
+      captchaText: '',
     }
   },
+
+  created() {
+    this.refreshCaptcha();
+  },
+
   methods: {
+
+    refreshCaptcha() {
+      this.captchaSrc=`http://localhost:28080/admin-api/auth/captcha?${Date.now()}`;
+      
+    }
+    ,
 
 
     focusPassword() {
@@ -83,8 +107,9 @@ export default {
       this.$refs.form.validate(valid => {
         if (valid) {
           this.loading = true
+          //this.$message(String(this.captchaText))
           
-          login(this.loginForm.username,this.loginForm.password)
+          login(this.loginForm.username,this.loginForm.password,this.captchaText)
           .then(res =>{
               if (res.code===200){
                 setToken(res.data.accessToken)

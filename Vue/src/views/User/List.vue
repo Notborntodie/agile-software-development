@@ -450,19 +450,21 @@ deleteRow(row) {
       localStorage.setItem('students', JSON.stringify(this.students))
       this.$message.success('保存成功')
     },
-    submit1(){
-      let students = JSON.parse(localStorage.getItem('students'));
-      subumitstulist(students)
-      .then(res =>{
-        if (res.code===200){
-                //this.$message.success(res.data.data.accessToken)
-          this.$message.success('上传学生名单成功')
-        }else{
-          this.$message.error("上传失败")
+    async submit1(){
+        try {
+        let students = JSON.parse(localStorage.getItem('students'));
+        const res = await subumitstulist(students);
+
+        if (res.code === 200) {
+            this.$message.success('上传学生名单成功');
+            await this.fetchData();
+        } else {
+            this.$message.error("上传失败");
         }
-        }).catch(() => {
-          this.$message.error('上传失败')
-        })
+        } catch (error) {
+          this.$message.error('上传失败');
+        }
+
       }
 ,
 

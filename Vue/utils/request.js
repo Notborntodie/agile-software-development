@@ -1,6 +1,8 @@
 import axios from 'axios';
 import {getAccessToken} from '/utils/auth';
 
+
+axios.defaults.withCredentials = true; 
 const service = axios.create({
   baseURL: 'http://localhost:28080/admin-api/',
   timeout: 5000

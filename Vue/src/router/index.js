@@ -4,7 +4,7 @@ import HomeView from '../views/HomeView.vue'
 import Layout from '../../layout/Layout.vue'
 import{getMenu} from'/api/login'
 import {EventBus} from '/api/EventBus'
-
+import {getAccessToken} from '/utils/auth';
 Vue.use(VueRouter)
 
 
@@ -125,8 +125,9 @@ async function fetchMenuData() {
   }
 }
 
-//fetchMenuData();
-
+if(getAccessToken()){
+  fetchMenuData();
+}
 
 // 监听事件
 EventBus.$on('login-success', fetchMenuData);
