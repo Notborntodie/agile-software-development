@@ -1,2 +1,113 @@
-2023-06-28 00:23:21 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2023-06-28 00:23:21 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-07-02 12:12:42 [restartedMain] INFO  com.web.test.TestApplication - Starting TestApplication using Java 1.8.0_362 on localhost with PID 83026 (/Users/zhengyanchen/Desktop/test/target/classes started by zhengyanchen in /Users/zhengyanchen/Desktop/test)
+2023-07-02 12:12:42 [restartedMain] INFO  com.web.test.TestApplication - No active profile set, falling back to 1 default profile: "default"
+2023-07-02 12:12:42 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-02 12:12:42 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-02 12:12:43 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-07-02 12:12:43 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-07-02 12:12:43 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2023-07-02 12:12:44 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 28080 (http)
+2023-07-02 12:12:44 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-07-02 12:12:44 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-07-02 12:12:44 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-07-02 12:12:44 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2153 ms
+2023-07-02 12:12:45 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-07-02 12:12:46 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 28080 (http) with context path ''
+2023-07-02 12:12:46 [restartedMain] INFO  com.web.test.TestApplication - Started TestApplication in 5.07 seconds (JVM running for 6.26)
+2023-07-02 12:13:06 [http-nio-28080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-02 12:13:06 [http-nio-28080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-07-02 12:13:06 [http-nio-28080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2023-07-02 12:13:20 [http-nio-28080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-07-02 12:13:21 [http-nio-28080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-07-02 12:13:21 [http-nio-28080-exec-2] INFO  c.web.test.Controller.AuthController - 111
+2023-07-02 12:13:31 [http-nio-28080-exec-3] INFO  c.web.test.Controller.AuthController - 222
+2023-07-02 12:13:31 [http-nio-28080-exec-3] INFO  c.web.test.Controller.AuthController - 111
+2023-07-02 12:13:31 [http-nio-28080-exec-3] INFO  c.web.test.Controller.AuthController - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMjIiLCJleHAiOjE2ODgyNzQ4MTEsImlhdCI6MTY4ODI3MTIxMX0.vNtYxPWMmh2DkviC8nU52MVsHPzHBN87p82bna9LrZ0
+2023-07-02 12:13:31 [http-nio-28080-exec-5] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /admin-api/user/profile/get
+2023-07-02 12:13:31 [http-nio-28080-exec-4] INFO  com.web.test.MyInterceptor - /admin-api/auth
+2023-07-02 12:13:35 [http-nio-28080-exec-6] INFO  com.web.test.MyInterceptor - /admin-api/auth
+2023-07-02 12:13:35 [http-nio-28080-exec-6] INFO  com.web.test.MyInterceptor - /admin-api/stulist/
+2023-07-02 12:13:53 [http-nio-28080-exec-7] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /admin-api/user/profile/get
+2023-07-02 12:13:53 [http-nio-28080-exec-8] INFO  com.web.test.MyInterceptor - /admin-api/auth
+2023-07-02 12:13:53 [http-nio-28080-exec-8] INFO  com.web.test.MyInterceptor - /admin-api/stulist/
+2023-07-02 12:13:58 [http-nio-28080-exec-9] INFO  com.web.test.MyInterceptor - /admin-api/auth
+2023-07-02 12:13:58 [http-nio-28080-exec-9] INFO  com.web.test.MyInterceptor - /admin-api/stulist/
+2023-07-02 12:13:58 [http-nio-28080-exec-9] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'application/x-www-form-urlencoded;charset=UTF-8' not supported]
+2023-07-02 12:14:04 [http-nio-28080-exec-10] INFO  com.web.test.MyInterceptor - /admin-api/auth
+2023-07-02 12:14:04 [http-nio-28080-exec-10] INFO  com.web.test.MyInterceptor - /admin-api/stulist/
+2023-07-02 12:14:04 [http-nio-28080-exec-10] INFO  c.w.t.Controller.StulistController - ok1
+2023-07-02 12:14:04 [http-nio-28080-exec-10] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.web.test.Controller.StulistController.submitStulist(StulistController.java:45)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:528)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:596)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+2023-07-02 12:15:01 [http-nio-28080-exec-2] INFO  com.web.test.MyInterceptor - /admin-api/auth
+2023-07-02 12:15:01 [http-nio-28080-exec-2] INFO  com.web.test.MyInterceptor - /admin-api/stulist/
+2023-07-02 12:15:20 [http-nio-28080-exec-5] INFO  c.web.test.Controller.AuthController - 101
+2023-07-02 12:15:20 [http-nio-28080-exec-5] INFO  c.web.test.Controller.AuthController - 101
+2023-07-02 12:15:20 [http-nio-28080-exec-5] INFO  c.web.test.Controller.AuthController - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMDEiLCJleHAiOjE2ODgyNzQ5MjAsImlhdCI6MTY4ODI3MTMyMH0.EK-KFw8aCs4nbjgdUN1PYLcmZRSE2f92vMuzP8BRQi0
+2023-07-02 12:15:20 [http-nio-28080-exec-6] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /admin-api/user/profile/get
+2023-07-02 12:15:20 [http-nio-28080-exec-4] INFO  com.web.test.MyInterceptor - /admin-api/auth
+2023-07-02 12:15:24 [http-nio-28080-exec-7] INFO  com.web.test.MyInterceptor - /admin-api/auth
+2023-07-02 12:15:24 [http-nio-28080-exec-7] INFO  com.web.test.MyInterceptor - /admin-api/auth
+2023-07-02 12:15:24 [http-nio-28080-exec-7] INFO  com.web.test.MyInterceptor - /admin-api/grade1/
+2023-07-02 12:15:24 [http-nio-28080-exec-7] INFO  c.w.test.Controller.Grade1Controller - czyczy
+2023-07-02 12:15:24 [http-nio-28080-exec-7] INFO  c.w.test.Controller.Grade1Controller - czyczyczy
+2023-07-02 12:15:24 [http-nio-28080-exec-8] INFO  com.web.test.MyInterceptor - /admin-api/auth
+2023-07-02 12:15:24 [http-nio-28080-exec-8] INFO  com.web.test.MyInterceptor - /admin-api/auth
+2023-07-02 12:15:24 [http-nio-28080-exec-8] INFO  com.web.test.MyInterceptor - /admin-api/grade1/
+2023-07-02 12:15:24 [http-nio-28080-exec-8] INFO  com.web.test.MyInterceptor - /admin-api/grade3/
+2023-07-02 12:15:24 [http-nio-28080-exec-9] INFO  com.web.test.MyInterceptor - /admin-api/auth
+2023-07-02 12:15:24 [http-nio-28080-exec-9] INFO  com.web.test.MyInterceptor - /admin-api/auth
+2023-07-02 12:15:24 [http-nio-28080-exec-9] INFO  com.web.test.MyInterceptor - /admin-api/grade1/
+2023-07-02 12:15:24 [http-nio-28080-exec-9] INFO  com.web.test.MyInterceptor - /admin-api/grade3/
+2023-07-02 12:15:24 [http-nio-28080-exec-10] INFO  com.web.test.MyInterceptor - /admin-api/auth
+2023-07-02 12:15:24 [http-nio-28080-exec-10] INFO  com.web.test.MyInterceptor - /admin-api/auth
+2023-07-02 12:15:24 [http-nio-28080-exec-10] INFO  com.web.test.MyInterceptor - /admin-api/grade1/
+2023-07-02 12:15:24 [http-nio-28080-exec-10] INFO  com.web.test.MyInterceptor - /admin-api/grade3/
+2023-07-02 12:15:24 [http-nio-28080-exec-1] INFO  com.web.test.MyInterceptor - /admin-api/auth
+2023-07-02 12:15:24 [http-nio-28080-exec-1] INFO  com.web.test.MyInterceptor - /admin-api/auth
+2023-07-02 12:15:24 [http-nio-28080-exec-1] INFO  com.web.test.MyInterceptor - /admin-api/grade1/
+2023-07-02 12:15:24 [http-nio-28080-exec-1] INFO  com.web.test.MyInterceptor - /admin-api/grade3/
+2023-07-02 12:15:43 [http-nio-28080-exec-2] INFO  com.web.test.MyInterceptor - /admin-api/auth
+2023-07-02 12:16:01 [http-nio-28080-exec-5] INFO  c.web.test.Controller.AuthController - 101
+2023-07-02 12:16:01 [http-nio-28080-exec-5] INFO  c.web.test.Controller.AuthController - 110
