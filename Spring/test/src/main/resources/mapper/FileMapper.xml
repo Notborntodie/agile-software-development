@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.web.test.Mapper.FileMapper">
+
+
+    <insert id="insertr" parameterType="com.web.test.DO.Research">
+        INSERT INTO Research (StudentId, FilePath )
+        VALUES (#{studentId}, #{filePath});
+    </insert>
+
+    <update id="updater" parameterType="com.web.test.DO.Research">
+        UPDATE Research
+        SET FilePath = #{FilePath}
+        WHERE StudentId = #{studentId};
+    </update>
+</mapper>

@@ -78,6 +78,7 @@ public interface UserMapper {
     void updater(Research research);
 
 
+
     SocialPractice spfindBysid(int studentId);
     void insertsp(SocialPractice socialPractice);
 

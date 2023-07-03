@@ -90,6 +90,19 @@
       <el-form-item label="科研经历" prop="research">
         <el-input type="textarea" placeholder="请输入科研经历" v-model="user.researchContent" class="custom-input"></el-input>
       </el-form-item>
+      <div>
+        <el-upload
+      class="upload-demo"
+      :before-upload="beforeUpload"
+      :on-success="onUploadSuccess"
+      :on-error="onUploadError"
+      :limit="1"
+      :file-list="fileList"
+      :auto-upload="true"
+    >
+      <el-button  class="custom-button" size="small" plain >点击上传科研证明</el-button>
+      </el-upload>
+      </div>
       
       <el-form-item label="学生骨干服务岗位" prop="backbone">
         <el-input type="textarea" placeholder="请输入学生骨干服务岗位" v-model="user.studentLeadershipContent" class="custom-input"></el-input>
@@ -204,11 +217,13 @@ import { getEvainfo} from '/api/info'
   import { changeEvainfo } from '/api/info'
   import {getBasicinfo} from  '/api/info'
   import { changeBasicinfo } from '/api/info'
+  import {uploadFile} from '/api/info'
   export default {
     name: 'AddUser',
     data() {
       return {
 
+        fileList: [],
         uu:{
           name: 'xxx',
           studentNumber: '222',
@@ -391,6 +406,43 @@ import { getEvainfo} from '/api/info'
             },
 
 
+            async beforeUpload(file) {
+      const isJPG = file.type === 'image/jpeg';
+      const isPNG = file.type === 'image/png';
+      const isLt2M = file.size / 1024 / 1024 < 2;
+
+      if (!isJPG && !isPNG) {
+        this.$message.error('只能上传 JPG/PNG 格式的图片');
+        return false;
+      }
+      if (!isLt2M) {
+        this.$message.error('上传图片大小不能超过 2MB');
+        return false;
+      }
+
+
+      //this.$message.success('文件');
+      // Use your custom upload function
+      try {
+        const response = await uploadFile(file);
+        this.$message.success(String(response));
+        // Process response as needed
+      } catch (error) {
+        this.$message.error('文件上传失败');
+        // Handle error as needed
+      }
+
+      this.fileList.push(file);
+      return false// 阻止自动上传
+    },
+    onUploadSuccess(response, file) {
+      //this.$message.success('文件上传成功');
+      // 处理上传成功的逻辑
+    },
+    onUploadError(error, file) {
+      //this.$message.error('文件上传失败');
+      // 处理上传失败的逻辑
+    },
         }
       }
   </script>
