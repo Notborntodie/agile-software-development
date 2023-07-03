@@ -395,11 +395,11 @@ export default {
           }
           this.handleBackendDataChange()
         } else {
-          this.$message.error('获取数据失败')
+          this.$message.error('获取数据失败1')
         }
       } catch (error) {
         console.error(error)
-        this.$message.error('获取数据失败')
+        this.$message.error('获取数据失败2')
       }
     },
 
