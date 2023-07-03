@@ -14,4 +14,12 @@
         SET FilePath = #{FilePath}
         WHERE StudentId = #{studentId};
     </update>
+
+
+    <select id="findFilePathById" parameterType="int" resultType="string">
+        SELECT FilePath
+        FROM Research
+        WHERE StudentId = #{studentId}
+    </select>
+
 </mapper>

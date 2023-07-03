@@ -11,6 +11,8 @@ Vue.config.productionTip = false
 
 Vue.use(ElementUI);
 
+// 设置全局配置
+//ElementUI.Message.defaults.duration = 10000; // 设置持续时间为 10 秒
 
 var axios = require('axios')
 // 全局注册，之后可在其他组件中通过 this.$axios 发送数据

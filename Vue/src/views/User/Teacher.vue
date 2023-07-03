@@ -79,6 +79,10 @@
           <el-table-column prop="content" label="内容" align="center"></el-table-column>
           <el-table-column label="打分" align="right">
             <template slot-scope="{ row }">
+              <el-button v-if="selectedCategory === 'research'" @click="showPhoto(row)">显示相关文件</el-button>
+              <el-dialog :visible.sync="dialogVisible" :width="'80%'">
+      <img :src="imageSrc" style="max-width: 100%;">
+    </el-dialog>
               <el-input type="number" v-model="row.grade" :min="0" :max="100"></el-input>
             </template>
           </el-table-column>
@@ -116,10 +120,13 @@
   import {setTable3} from '/api/Grade'
   import {setTable4} from '/api/Grade'
   import {setTable5} from '/api/Grade'
+  import {getFile} from  '/api/info'
 
   export default {
     data() {
       return {
+        dialogVisible: false,
+        imageSrc: '',
         selectedCategory: '',
         categories: [
           { label: '个人学年总结', value: 'personal' },
@@ -188,6 +195,63 @@
     },
   },
     methods: {
+
+
+
+
+
+
+    async showPhoto(row) {
+    try {
+        const response = await getFile(row.index);
+      
+
+        console.log(response);
+        this.dialogVisible = true;
+        this.imageSrc = `http://localhost:28080/${response}`;
+
+
+    } catch (error) {
+        console.error('获取文件失败', error);
+        this.$message.error('获取文件失败');
+    }
+}
+
+,
+  /*    
+
+    async showPhoto(row) {
+
+      try {
+    const response = await getFile(row.index);
+    const base64 = response.data;
+    const photoUrl = "data:image/jpeg;base64," + base64;
+    this.$alert(`<img src="${photoUrl}" style="max-width: 100%">`, '照片', {
+        dangerouslyUseHTMLString: true,
+    });
+} catch (error) {
+    console.error('获取文件失败', error);
+    this.$message.error('获取文件失败');
+}
+*/
+      /*
+      this.$message.error(String(row.index));
+      
+      try {
+
+          const response = await getFile(row.index);
+          console.log(response.data); // 打印出 response.data 的内容
+          const photoUrl = URL.createObjectURL(response.data);
+          this.$alert(`<img src="${photoUrl}" style="max-width: 100%">`, '照片', {
+          dangerouslyUseHTMLString: true,
+    });
+    } catch (error) {
+        console.error('获取文件失败', error);
+        this.$message.error('获取文件失败');
+    }
+
+    */
+  
       handleChange() {
         switch (this.selectedCategory) {
           case 'personal':
@@ -575,6 +639,21 @@ handleSubmit5() {
 
 
 <style>
+
+
+
+
+    .zoom {
+        transition: transform .2s;
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
+    .zoom:hover {
+        transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    }
+
+
 .custom-button {
   color: #606266;
   background-color: #ecf5ff;

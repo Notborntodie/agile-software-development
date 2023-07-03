@@ -60,5 +60,14 @@ export function changeBasicinfo(user){
 }
 
 
+export function getFile(index){
+    return request({
+        url: `file/${index}`,
+        method: 'get',
+    }
+    )
+}
+
+
 
 

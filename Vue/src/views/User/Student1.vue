@@ -287,6 +287,8 @@ import { getEvainfo} from '/api/info'
         storageKey2: 'user2_data', // 存储在本地的键名
 
 
+        storageKey3:"file",
+
         students: [
            { name: '张三', id: '20210001', gpa: 3.5 , grade1: 3,grade2: 3,grade3: 3,grade4: 3,grade5: 3},
         ]
@@ -318,6 +320,10 @@ import { getEvainfo} from '/api/info'
   if (response2.code == 200){
     this.user2 = response2.data;
     //this.$message.success(response2.data.name);
+  }
+  const data3 = localStorage.getItem(this.storageKey3)
+  if (data3) {
+    this.fileList= JSON.parse(data3)
   }
 
   this.getUserData();
@@ -431,8 +437,14 @@ import { getEvainfo} from '/api/info'
         this.$message.error('文件上传失败');
         // Handle error as needed
       }
+// Clear fileList
+        this.fileList.splice(0, this.fileList.length);
+
+
 
       this.fileList.push(file);
+      localStorage.setItem(this.storageKey3, JSON.stringify(this.fileList))
+
       return false// 阻止自动上传
     },
     onUploadSuccess(response, file) {

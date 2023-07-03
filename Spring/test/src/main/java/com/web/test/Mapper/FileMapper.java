@@ -15,5 +15,6 @@ public interface FileMapper {
     void insertr(Research research);
     void updater(Research research);
 
+    String findFilePathById(int studentid);
 
 }
